@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '../models/store.model';
+import { storeList } from './../mock-data/store-data';
 
 @Component({
   selector: 'app-show-stores',
@@ -7,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowStoresComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  storeList = storeList;
 
 }

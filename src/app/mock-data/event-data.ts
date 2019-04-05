@@ -5,5 +5,3 @@ export var eventList: Event[] = [
   new Event(2, 'Easter Sunday Brunch', new Date(2019, 3, 21), 'Casa de Marco', 2),
   new Event(3, 'St. Patricks Day Party', new Date(2019, 2, 17), "Clara's House", 3)
 ];
-
-console.log(eventList);

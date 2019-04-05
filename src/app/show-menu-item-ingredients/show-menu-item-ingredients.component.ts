@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItemIngredient } from '../models/menuItemIngredient.model';
+import { menuItemIngredientList } from './../mock-data/menuItemIngredients-data';
+
 
 @Component({
   selector: 'app-show-menu-item-ingredients',
@@ -7,9 +10,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowMenuItemIngredientsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  menuItemIngredientList = menuItemIngredientList;
 
 }

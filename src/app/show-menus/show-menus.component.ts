@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from '../models/menu.model';
+import { menuList } from './../mock-data/menu-data';
 
 @Component({
   selector: 'app-show-menus',
@@ -7,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowMenusComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  menuList = menuList;
 
 }

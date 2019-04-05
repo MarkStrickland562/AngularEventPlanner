@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Invitee } from '../models/invitee.model';
+import { inviteeList } from './../mock-data/invitee-data';
 
 @Component({
   selector: 'app-show-invitees',
@@ -7,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowInviteesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  inviteeList = inviteeList;
 
 }
