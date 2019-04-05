@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Event } from '@angular/core';
+import { Event } from '../models/event.model';
 
 @Component({
   selector: 'app-delete-event',
@@ -12,6 +12,9 @@ export class DeleteEventComponent {
   @Input() childSelectedEvent: Event;
 
   submitForm(confirmDelete) {
+    if (confirmDelete === 'Y') {
+
     this.sendConfirm.emit(confirmDelete);
+    }
   }
 }

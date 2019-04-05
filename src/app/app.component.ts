@@ -26,7 +26,8 @@ export class AppComponent {
     this.selectedEvent = null;
   }
 
-  deleteEvent(newEvent: Event) {
+  deleteEvent(clickedEvent) {
+    this.selectedEvent = clickedEvent;
     eventList.splice(this.selectedEvent);
   }
 }

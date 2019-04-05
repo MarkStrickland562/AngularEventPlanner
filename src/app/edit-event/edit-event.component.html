@@ -1,6 +1,7 @@
 <div *ngIf="childSelectedEvent">
-  <h3>{{childSelectedEvent.eventName}}</h3>
-  <h3>Edit Event</h3>
+  <h3>Update Event</h3>
+  <h4>{{childSelectedEvent.eventName}}</h4>
+  <h4>Edit Event</h4>
   <label>Update Event Name:</label>
   <input [(ngModel)]="childSelectedEvent.eventName">
   <label>Update Event Date:</label>

@@ -1,4 +1,5 @@
-<div>
+<div *ngIf="childSelectedEvent">
+  <h3>Delete Event</h3>
   <label>Confirm Delete [Y/N]:</label>
   <select #confirmDelete>
     <option [value]="N">No</option>
