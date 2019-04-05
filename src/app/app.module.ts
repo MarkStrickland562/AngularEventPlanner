@@ -25,6 +25,11 @@ import { NewMenuItemComponent } from './new-menu-item/new-menu-item.component';
 import { EditMenuItemComponent } from './edit-menu-item/edit-menu-item.component';
 import { DeleteMenuItemComponent } from './delete-menu-item/delete-menu-item.component';
 import { SearchMenuItemComponent } from './search-menu-item/search-menu-item.component';
+import { ShowMenuItemIngredientsComponent } from './show-menu-item-ingredients/show-menu-item-ingredients.component';
+import { NewMenuItemIngredientComponent } from './new-menu-item-ingredient/new-menu-item-ingredient.component';
+import { EditMenuItemIngredientComponent } from './edit-menu-item-ingredient/edit-menu-item-ingredient.component';
+import { DeleteMenuItemIngredientComponent } from './delete-menu-item-ingredient/delete-menu-item-ingredient.component';
+import { SearchMenuItemIngredientComponent } from './search-menu-item-ingredient/search-menu-item-ingredient.component';
 
 
 @NgModule({
@@ -51,7 +56,12 @@ import { SearchMenuItemComponent } from './search-menu-item/search-menu-item.com
     NewMenuItemComponent,
     EditMenuItemComponent,
     DeleteMenuItemComponent,
-    SearchMenuItemComponent
+    SearchMenuItemComponent,
+    ShowMenuItemIngredientsComponent,
+    NewMenuItemIngredientComponent,
+    EditMenuItemIngredientComponent,
+    DeleteMenuItemIngredientComponent,
+    SearchMenuItemIngredientComponent
   ],
   imports: [
     BrowserModule

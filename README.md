@@ -49,6 +49,43 @@ This assumes that node is already installed, but verify with "node -v".
 * Create models for the data.
 * Create scripts to add mock data.
 * Create components for showing, adding, editing, deleting and searching for model-related objects.
+<details>
+<summary>Click Here for Details</summary>
+1) Create the About and Main child components by executing the following command at the bash prompt:
+  $ ng generate component main
+  $ ng generate component about
+2) Create the Event child components by executing the following commmands at the bash prompt:
+  $ ng generate component show-events
+  $ ng generate component new-event
+  $ ng generate component edit-event
+  $ ng generate component delete-event
+  $ ng generate component search-event
+3) Create the Menu child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-menus
+    $ ng generate component new-menu
+    $ ng generate component edit-menu
+    $ ng generate component delete-menu
+    $ ng generate component search-menu
+4) Create the Task child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-tasks
+    $ ng generate component new-task
+    $ ng generate component edit-task
+    $ ng generate component delete-task
+    $ ng generate component search-task
+5) Create the MenuItem child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-menu-items
+    $ ng generate component new-menu-item
+    $ ng generate component edit-menu-item
+    $ ng generate component delete-menu-item
+    $ ng generate component search-menu-item
+6) Create the MenuItemIngredient child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-menu-item-ingredients
+    $ ng generate component new-menu-item-ingredient
+    $ ng generate component edit-menu-item-ingredient
+    $ ng generate component delete-menu-item-ingredient
+    $ ng generate component search-menu-item-ingredient
+</details>
+
 * Create views for showing, adding, editing, deleting and searching for model-related objects.
 * Add routes for the components.
 
