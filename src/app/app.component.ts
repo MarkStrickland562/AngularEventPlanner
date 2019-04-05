@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { eventList } from './mock-data/event-data';
+import { Event } from './models/event.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eHappenings';
+
+  eventList = eventList;
+
+  addEvent(newEvent: Event) {
+     this.eventList.push(newEvent);
+   }
 }

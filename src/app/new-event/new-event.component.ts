@@ -10,8 +10,8 @@ import { Event } from '../models/event.model';
 export class NewEventComponent  {
   @Output() sendEvent = new EventEmitter();
 
-  submitForm(eventName: string, eventDate: Date = new Date(), eventLocation: string) {
-    let newEvent: Event = new Event(100, eventName, eventDate, eventLocation, 1);
+  submitForm(eventId: number, eventName: string, eventDate: Date = new Date(), eventLocation: string, menusId: number) {
+    let newEvent: Event = new Event(eventId, eventName, eventDate, eventLocation, menusId);
     this.sendEvent.emit(newEvent);
   }
 }
