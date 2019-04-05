@@ -129,7 +129,7 @@ Create and populate the following scripts for the model classes:
   </tr>
 </table>
 </details>
-* Create components for showing, adding, editing, deleting and searching for model-related objects.
+* Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
 1) Create the About and Main child components by executing the following command at the bash prompt:
@@ -178,16 +178,20 @@ Create and populate the following scripts for the model classes:
     $ ng generate component delete-invitee
     $ ng generate component search-invitee
 </details>
-* Create views for showing, adding, editing, deleting and searching for model-related objects.
+* Develop views for showing data for all model classes.
+* Develop functional CRUD views for Events.
+* Add basic styling in a single page.
 * Add routes for the components.
 
 #### Part Two (Week #2)
+* Complete development of all CRUD views.
 * Move the data to a database.
 * Add services and dependency-injection for accessing the database.
 * Add deployment to Firebase.
 * Add an API call.
 * Add user authentication
 * Add route guards
+* Add styling.
 
 ## Technical Architecture
 
