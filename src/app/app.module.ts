@@ -20,6 +20,11 @@ import { NewTaskComponent } from './new-task/new-task.component';
 import { EditTaskComponent } from './edit-task/edit-task.component';
 import { DeleteTaskComponent } from './delete-task/delete-task.component';
 import { SearchTaskComponent } from './search-task/search-task.component';
+import { ShowMenuItemsComponent } from './show-menu-items/show-menu-items.component';
+import { NewMenuItemComponent } from './new-menu-item/new-menu-item.component';
+import { EditMenuItemComponent } from './edit-menu-item/edit-menu-item.component';
+import { DeleteMenuItemComponent } from './delete-menu-item/delete-menu-item.component';
+import { SearchMenuItemComponent } from './search-menu-item/search-menu-item.component';
 
 
 @NgModule({
@@ -41,7 +46,12 @@ import { SearchTaskComponent } from './search-task/search-task.component';
     NewTaskComponent,
     EditTaskComponent,
     DeleteTaskComponent,
-    SearchTaskComponent
+    SearchTaskComponent,
+    ShowMenuItemsComponent,
+    NewMenuItemComponent,
+    EditMenuItemComponent,
+    DeleteMenuItemComponent,
+    SearchMenuItemComponent
   ],
   imports: [
     BrowserModule
