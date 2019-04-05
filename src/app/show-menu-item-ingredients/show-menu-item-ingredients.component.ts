@@ -8,7 +8,8 @@ import { menuItemIngredientList } from './../mock-data/menuItemIngredients-data'
   templateUrl: './show-menu-item-ingredients.component.html',
   styleUrls: ['./show-menu-item-ingredients.component.css']
 })
-export class ShowMenuItemIngredientsComponent implements OnInit {
+
+export class ShowMenuItemIngredientsComponent  {
 
   menuItemIngredientList = menuItemIngredientList;
 

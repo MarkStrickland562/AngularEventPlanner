@@ -20,5 +20,3 @@ export var menuItemList: MenuItem[] = [
   new MenuItem(17, 'Irish Whiskey'),
   new MenuItem(18, 'Condiments')
 ];
-
-console.log(menuItemList);

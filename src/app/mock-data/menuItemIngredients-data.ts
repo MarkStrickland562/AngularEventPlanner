@@ -28,5 +28,3 @@ export var menuItemIngredientList: MenuItemIngredient[] = [
   new MenuItemIngredient(25, 'Soda Bread, 2-Dozen Pieces', 1, 1),
   new MenuItemIngredient(25, 'Irish Whiskey, 2-Litres', 1, 1)
 ];
-
-console.log(menuItemIngredientList);

@@ -7,5 +7,3 @@ export var storeList: Store[] = [
   new Store(4, 'QFC'),
   new Store(5, "Trader Joe's")
 ];
-
-console.log(storeList);

@@ -7,7 +7,8 @@ import { storeList } from './../mock-data/store-data';
   templateUrl: './show-stores.component.html',
   styleUrls: ['./show-stores.component.css']
 })
-export class ShowStoresComponent implements OnInit {
+
+export class ShowStoresComponent  {
 
   storeList = storeList;
 

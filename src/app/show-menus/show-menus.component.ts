@@ -7,7 +7,8 @@ import { menuList } from './../mock-data/menu-data';
   templateUrl: './show-menus.component.html',
   styleUrls: ['./show-menus.component.css']
 })
-export class ShowMenusComponent implements OnInit {
+
+export class ShowMenusComponent  {
 
   menuList = menuList;
 

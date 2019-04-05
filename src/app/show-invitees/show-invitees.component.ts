@@ -7,7 +7,7 @@ import { inviteeList } from './../mock-data/invitee-data';
   templateUrl: './show-invitees.component.html',
   styleUrls: ['./show-invitees.component.css']
 })
-export class ShowInviteesComponent implements OnInit {
+export class ShowInviteesComponent  {
 
   inviteeList = inviteeList;
 

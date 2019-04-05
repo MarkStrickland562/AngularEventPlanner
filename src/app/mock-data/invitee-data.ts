@@ -6,5 +6,3 @@ export var inviteeList: Invitee[] = [
   new Invitee(3, 'Shawn Lunsford', 'lunsford.sk@gmail.com'),
   new Invitee(4, 'Micaela Jawor', 'micaelajawor@yahoo.com')
 ];
-
-console.log(inviteeList);

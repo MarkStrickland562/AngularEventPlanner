@@ -1,4 +1,4 @@
 export class Menu {
-  constructor (menuId: number,
-               menuTheme: string){}
+  constructor (public menuId: number,
+               public menuTheme: string){}
 }

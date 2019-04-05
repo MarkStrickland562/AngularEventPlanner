@@ -5,5 +5,3 @@ export var menuList: Menu[] = [
   new Menu(2, 'Boozy Brunch'),
   new Menu(3, 'Green Food or Potato Dishes')
 ];
-
-console.log(menuList);
