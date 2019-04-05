@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Event } from '@angular/core';
 
 @Component({
   selector: 'app-delete-event',
   templateUrl: './delete-event.component.html',
   styleUrls: ['./delete-event.component.css']
 })
-export class DeleteEventComponent implements OnInit {
 
-  constructor() { }
+export class DeleteEventComponent {
+  @Output() sendConfirm = new EventEmitter();
+  @Input() childSelectedEvent: Event;
 
-  ngOnInit() {
+  submitForm(confirmDelete) {
+    this.sendConfirm.emit(confirmDelete);
   }
-
 }

@@ -1,4 +1,4 @@
 <ul>
-  <li *ngFor="let currentEvent of eventList">{{currentEvent.eventName}}  {{currentEvent.eventDate}}  {{currentEvent.eventLocation}} <button (click)="editButtonClicked(currentEvent)">Update!</button>
+  <li *ngFor="let currentEvent of eventList">{{currentEvent.eventName}}  {{currentEvent.eventDate}}  {{currentEvent.eventLocation}} <button (click)="editButtonClicked(currentEvent)">Update!</button><button (click)="deleteButtonClicked(currentEvent)">Delete!</button>
   </li>
 </ul>

@@ -7,6 +7,7 @@ import { Event } from './models/event.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'eHappenings';
   selectedEvent = null;
@@ -23,5 +24,9 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedEvent = null;
+  }
+
+  deleteEvent(newEvent: Event) {
+    eventList.splice(this.selectedEvent);
   }
 }

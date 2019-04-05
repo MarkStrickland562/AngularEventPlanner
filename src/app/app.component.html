@@ -10,6 +10,7 @@
 <app-show-events [childEventList]="eventList" (clickSender)="editEvent($event)"></app-show-events>
 <app-new-event (sendEvent)="addEvent($event)"></app-new-event>
 <app-edit-event [childSelectedEvent]="selectedEvent" (clickedDone)="finishedEditing()"></app-edit-event>
+<app-delete-event [childSelectedEvent]="selectedEvent" (clickedConfirm)="confirmDelete()"></app-delete-event>
 <app-show-menus></app-show-menus>
 <app-show-menu-items></app-show-menu-items>
 <app-show-menu-item-ingredients></app-show-menu-item-ingredients>

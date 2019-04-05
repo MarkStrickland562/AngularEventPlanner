@@ -1,3 +1,8 @@
-<p>
-  delete-event works!
-</p>
+<div>
+  <label>Confirm Delete [Y/N]:</label>
+  <select #confirmDelete>
+    <option [value]="N">No</option>
+    <option [value]="Y">Yes</option>
+  </select>
+  <button (click)="submitForm(confirmDelete.value)">Confirm</button>
+</div>
