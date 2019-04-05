@@ -90,6 +90,43 @@ Create and populate the following scripts for the model classes:
 </table>
 </details>
 * Create scripts to add mock data.
+<details>
+<summary>Click Here for Details</summary>
+<table>
+  <tr>
+    <th>Script Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/event-data.ts</td>
+    <td>Data for the Event class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/menu-data.ts</td>
+    <td>Data for the Menu class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/menuItem-data.ts</td>
+    <td>Data for the MenuItem class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/menuItemIngredient-data.ts</td>
+    <td>Data for the MenuItemIngredient class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/task-data.ts</td>
+    <td>Data for the Task class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/store-data.ts</td>
+    <td>Data for the Store class</td>
+  </tr>
+  <tr>
+    <td>src/app/mock-data/invitee-data.ts</td>
+    <td>Data for the Invitee class</td>
+  </tr>
+</table>
+</details>
 * Create components for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
@@ -139,7 +176,6 @@ Create and populate the following scripts for the model classes:
     $ ng generate component delete-invitee
     $ ng generate component search-invitee
 </details>
-
 * Create views for showing, adding, editing, deleting and searching for model-related objects.
 * Add routes for the components.
 
