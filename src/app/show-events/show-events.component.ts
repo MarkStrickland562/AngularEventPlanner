@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Event } from '../models/event.model';
 import { eventList } from './../mock-data/event-data';
 
@@ -9,6 +9,12 @@ import { eventList } from './../mock-data/event-data';
 })
 
 export class ShowEventsComponent  {
-
   eventList = eventList
+
+  @Input() childEventList: Event[];
+  @Output() clickSender = new EventEmitter();
+
+  editButtonClicked(eventToEdit: Event) {
+    this.clickSender.emit(eventToEdit);
+  }
 }

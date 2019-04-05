@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Event } from '../models/event.model';
 
 @Component({
   selector: 'app-edit-event',
   templateUrl: './edit-event.component.html',
   styleUrls: ['./edit-event.component.css']
 })
-export class EditEventComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class EditEventComponent  {
+  @Input() childSelectedEvent: Event;
 }

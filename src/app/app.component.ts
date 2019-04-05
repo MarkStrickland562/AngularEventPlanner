@@ -9,10 +9,19 @@ import { Event } from './models/event.model';
 })
 export class AppComponent {
   title = 'eHappenings';
+  selectedEvent = null;
 
   eventList = eventList;
+
+  editEvent(clickedEvent) {
+    this.selectedEvent = clickedEvent;
+  }
 
   addEvent(newEvent: Event) {
      this.eventList.push(newEvent);
    }
+
+  finishedEditing() {
+    this.selectedEvent = null;
+  }
 }

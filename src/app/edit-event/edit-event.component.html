@@ -1,3 +1,11 @@
-<p>
-  edit-event works!
-</p>
+<div *ngIf="childSelectedEvent">
+  <h3>{{childSelectedEvent.eventName}}</h3>
+  <h3>Edit Event</h3>
+  <label>Update Event Name:</label>
+  <input [(ngModel)]="childSelectedEvent.eventName">
+  <label>Update Event Date:</label>
+  <input [(ngModel)]="childSelectedEvent.eventName" type="date">
+  <label>Update Event Location:</label>
+  <input [(ngModel)]="childSelectedEvent.eventLocation">
+  <button (click)="finishedEditing()">Done</button>
+</div>
