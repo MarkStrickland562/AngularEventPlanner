@@ -10,5 +10,4 @@ import { eventList } from './../mock-data/event-data';
 
 export class ShowEventsComponent  {
 
-  eventList = eventList
 }

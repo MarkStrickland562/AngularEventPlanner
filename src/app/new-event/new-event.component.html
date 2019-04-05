@@ -1,3 +1,10 @@
-<p>
-  new-event works!
-</p>
+<h1>New Event</h1>
+<div>
+ <label>Enter Event Name:</label>
+ <input #newEventName>
+ <label>Enter Event Date:</label>
+ <input #newEventDate type="date">
+ <label>Enter Event Location:</label>
+ <input #newEventLocation>
+  <button (click)="submitForm(newEventName.value, newEventDate.value, newEventLocation.value)">Add Event</button>
+</div>
