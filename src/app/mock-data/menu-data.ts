@@ -1,9 +1,9 @@
 import { Menu } from './../models/menu.model';
 
-menus: Menu[] = [
+export var menuList: Menu[] = [
   new Menu(1, 'Summer BBQ'),
   new Menu(2, 'Boozy Brunch'),
   new Menu(3, 'Green Food or Potato Dishes')
 ];
 
-console.log(menus);
+console.log(menuList);

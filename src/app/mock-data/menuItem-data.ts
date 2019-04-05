@@ -1,6 +1,6 @@
 import { MenuItem } from './../models/menuItem.model';
 
-menuItems: MenuItem[] = [
+export var menuItemList: MenuItem[] = [
   new MenuItem(1,'Burgers'),
   new MenuItem(2, 'Hot Dogs'),
   new MenuItem(3, 'Potato Chips'),
@@ -21,4 +21,4 @@ menuItems: MenuItem[] = [
   new MenuItem(18, 'Condiments')
 ];
 
-console.log(menuItems);
+console.log(menuItemList);

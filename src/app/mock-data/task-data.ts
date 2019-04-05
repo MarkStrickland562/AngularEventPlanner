@@ -1,6 +1,6 @@
 import { Task } from './../models/task.model';
 
-export default tasks: Task[] = [
+export var taskList: Task[] = [
   new Task(1, 'Grill Meat', new Date(2019, 8, 4, 14, 30, 0)),
   new Task(2, 'Put Food Out', new Date(2019, 8, 4, 15, 0, 0)),
   new Task(3, 'Set Tables', new Date(2019, 5, 21, 08, 0, 0)),
@@ -19,4 +19,4 @@ export default tasks: Task[] = [
   new Task(16, 'Put Food Out', new Date(2019, 4, 17, 17, 30, 0))
 ];
 
-console.log(tasks[0]);
+console.log(taskList);

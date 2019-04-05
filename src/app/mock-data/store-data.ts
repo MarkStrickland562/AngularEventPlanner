@@ -1,6 +1,6 @@
 import { Store } from './../models/store.model';
 
-stores: Store[] = [
+export var storeList: Store[] = [
   new Store(1, 'Costco'),
   new Store(2, 'Cash & Carry'),
   new Store(3, 'Grocery Outlet'),
@@ -8,4 +8,4 @@ stores: Store[] = [
   new Store(5, "Trader Joe's")
 ];
 
-console.log(stores);
+console.log(storeList);

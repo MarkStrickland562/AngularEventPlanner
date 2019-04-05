@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Event } from './models/event.model';
+import { eventList } from './mock-data/event-data';
 
 @Component({
   selector: 'app-root',

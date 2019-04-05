@@ -1,6 +1,6 @@
 import { MenuItemIngredient } from './../models/menuItemIngredient.model';
 
-menuItemIngredients: MenuItemIngredient[] = [
+export var menuItemIngredientList: MenuItemIngredient[] = [
   new MenuItemIngredient(1, 'Ground Beef, 10#', 1, 1),
   new MenuItemIngredient(2, 'Hot Dogs, 3-Dozen', 1, 1),
   new MenuItemIngredient(3, 'Baked Beans, #10 Can', 1, 1),
@@ -29,4 +29,4 @@ menuItemIngredients: MenuItemIngredient[] = [
   new MenuItemIngredient(25, 'Irish Whiskey, 2-Litres', 1, 1)
 ];
 
-console.log(menuItemIngredients);
+console.log(menuItemIngredientList);
