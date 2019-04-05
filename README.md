@@ -47,6 +47,7 @@ This assumes that node is already installed, but verify with "node -v".
   ],
 4) Add the Forms Module to app.module.ts. In the top section of imports add "import { FormsModule } from '@angular/forms'". In the @ngModule section in the imports array, add ", FormsModule" after "BrowserModule".
 </details>
+
 * Create model classes for the data.
 <details>
 <summary>Click Here for Details</summary>
@@ -91,6 +92,7 @@ Create and populate the following scripts for the model classes:
   </tr>
 </table>
 </details>
+
 * Create scripts to add mock data.
 <details>
 <summary>Click Here for Details</summary>
@@ -129,6 +131,7 @@ Create and populate the following scripts for the model classes:
   </tr>
 </table>
 </details>
+
 * Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
@@ -178,6 +181,7 @@ Create and populate the following scripts for the model classes:
     $ ng generate component delete-invitee
     $ ng generate component search-invitee
 </details>
+
 * Develop views for showing data for all model classes.
 * Develop functional CRUD views for Events.
 * Add basic styling in a single page.
