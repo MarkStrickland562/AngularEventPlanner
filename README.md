@@ -59,7 +59,8 @@ Create and populate the following scripts for the model classes:
   <tr>
     <td>Event</td>
     <td>src/models/event.ts</td>
-    <td>export class Event {<br>constructor (public eventId: number,<br>public eventName: string) {}<br>}</td>
+    <td>export class Event {<br>constructor (public eventId: number,<br>public eventName: string<br>public eventDate: Date = new Date(),<br>public eventLocation: string,<br>
+             public menusId: number) {}<br>}</td>
   </tr>    
   <tr>
     <td>Menu</td>
