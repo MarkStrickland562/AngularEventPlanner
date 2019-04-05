@@ -45,6 +45,7 @@ This assumes that node is already installed, but verify with "node -v".
   "../node_modules/bootstrap/dist/css/bootstrap.min.css",
   "styles.css"
   ],
+4) Add the Forms Module to app.module.ts. In the top section of imports add "import { FormsModule } from '@angular/forms'". In the @ngModule section in the imports array, add ", FormsModule" after "BrowserModule".
 </details>
 * Create model classes for the data.
 <details>
