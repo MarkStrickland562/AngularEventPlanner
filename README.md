@@ -46,7 +46,49 @@ This assumes that node is already installed, but verify with "node -v".
   "styles.css"
   ],
 </details>
-* Create models for the data.
+* Create model classes for the data.
+<details>
+<summary>Click Here for Details</summary>
+Create and populate the following scripts for the model classes:
+<table>
+  <tr>
+    <th>Class Name</th>
+    <th>File Name</th>
+    <th>Class Code</th>
+  </tr>
+  <tr>
+    <td>Event</td>
+    <td>src/models/event.ts</td>
+    <td>export class Event {<br>constructor (public eventId: number,<br>public eventName: string) {}<br>}</td>
+  </tr>    
+  <tr>
+    <td>Menu</td>
+    <td>src/models/menu.ts</td>
+    <td>export class Menu {<br>constructor (menuId: number,<br>menuTheme: string){}<br>}</td>
+  </tr>    
+  <tr>
+    <td>MenuItem</td>
+    <td>src/models/menuItem.ts</td>
+    <td>export class MenuItem {<br>constructor(public menuItemId: number,<br>public menuItemDescription: string) {}<br>}</td>
+  </tr>
+  <tr>
+    <td>MenuItemIngredient</td>
+    <td>src/models/menuItemIngredient.ts</td>
+    <td>export class MenuItemIngredient {<br>constructor(public menuItemIngredientId: number,<br>public ingredientDescription: string,<br>public menuItemsId: number,<br>public storeId: number) {}<br>}</td>
+  </tr>
+  <tr>
+    <td>Task</td>
+    <td>src/models/task.ts</td>
+    <td>export class Task {<br>constructor(public taskId: number,<br>public taskDescription: string,<br>public taskPlannedStartDateTime: Date = new Date()) {}<br>}</td>
+  </tr>
+  <tr>
+    <td>Invitee</td>
+    <td>src/models/invitee.ts</td>
+    <td>export class Invitee {<br>constructor(public inviteeId: number,<br>
+              public inviteeName: string,<br>public inviteeEmailAddress: string) {}<br>}</td>
+  </tr>
+</table>
+</details>
 * Create scripts to add mock data.
 * Create components for showing, adding, editing, deleting and searching for model-related objects.
 <details>
