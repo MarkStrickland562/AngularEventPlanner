@@ -15,6 +15,11 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { DeleteMenuComponent } from './delete-menu/delete-menu.component';
 import { SearchMenuComponent } from './search-menu/search-menu.component';
 import { MainComponent } from './main/main.component';
+import { ShowTasksComponent } from './show-tasks/show-tasks.component';
+import { NewTaskComponent } from './new-task/new-task.component';
+import { EditTaskComponent } from './edit-task/edit-task.component';
+import { DeleteTaskComponent } from './delete-task/delete-task.component';
+import { SearchTaskComponent } from './search-task/search-task.component';
 
 
 @NgModule({
@@ -31,7 +36,12 @@ import { MainComponent } from './main/main.component';
     EditMenuComponent,
     DeleteMenuComponent,
     SearchMenuComponent,
-    MainComponent
+    MainComponent,
+    ShowTasksComponent,
+    NewTaskComponent,
+    EditTaskComponent,
+    DeleteTaskComponent,
+    SearchTaskComponent
   ],
   imports: [
     BrowserModule
