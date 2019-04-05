@@ -84,6 +84,18 @@ This assumes that node is already installed, but verify with "node -v".
     $ ng generate component edit-menu-item-ingredient
     $ ng generate component delete-menu-item-ingredient
     $ ng generate component search-menu-item-ingredient
+7) Create the Store child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-stores
+    $ ng generate component new-store
+    $ ng generate component edit-store
+    $ ng generate component delete-store
+    $ ng generate component search-store
+8) Create the Invitee child components by executing the following commmands at the bash prompt:
+    $ ng generate component show-invitees
+    $ ng generate component new-invitee
+    $ ng generate component edit-invitee
+    $ ng generate component delete-invitee
+    $ ng generate component search-invitee
 </details>
 
 * Create views for showing, adding, editing, deleting and searching for model-related objects.

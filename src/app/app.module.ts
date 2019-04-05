@@ -36,6 +36,11 @@ import { EdidtStoreComponent } from './edidt-store/edidt-store.component';
 import { EditStoreComponent } from './edit-store/edit-store.component';
 import { DeleteStoreComponent } from './delete-store/delete-store.component';
 import { SearchStoreComponent } from './search-store/search-store.component';
+import { ShowInviteesComponent } from './show-invitees/show-invitees.component';
+import { NewInviteeComponent } from './new-invitee/new-invitee.component';
+import { EditInviteeComponent } from './edit-invitee/edit-invitee.component';
+import { DeleteInviteeComponent } from './delete-invitee/delete-invitee.component';
+import { SearchInviteeComponent } from './search-invitee/search-invitee.component';
 
 
 @NgModule({
@@ -73,7 +78,12 @@ import { SearchStoreComponent } from './search-store/search-store.component';
     EdidtStoreComponent,
     EditStoreComponent,
     DeleteStoreComponent,
-    SearchStoreComponent
+    SearchStoreComponent,
+    ShowInviteesComponent,
+    NewInviteeComponent,
+    EditInviteeComponent,
+    DeleteInviteeComponent,
+    SearchInviteeComponent
   ],
   imports: [
     BrowserModule
