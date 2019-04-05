@@ -13,7 +13,6 @@ export class DeleteEventComponent {
 
   submitForm(confirmDelete) {
     if (confirmDelete === 'Y') {
-
     this.sendConfirm.emit(confirmDelete);
     }
   }

@@ -26,8 +26,8 @@ export class AppComponent {
     this.selectedEvent = null;
   }
 
-  deleteEvent(clickedEvent) {
-    this.selectedEvent = clickedEvent;
-    eventList.splice(this.selectedEvent);
+  deleteEvent() {
+    eventList.splice(eventList.indexOf(this.selectedEvent));
+    this.selectedEvent = null;
   }
 }
