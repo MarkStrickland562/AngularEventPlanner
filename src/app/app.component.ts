@@ -9,4 +9,6 @@ import { eventList } from './mock-data/event-data';
 })
 export class AppComponent {
   title = 'eHappenings';
+
+  eventList = eventList;
 }

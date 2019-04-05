@@ -1,3 +1,4 @@
-<p>
-  show-events works!
-</p>
+<ul>
+  <li *ngFor="let currentEvent of eventList">{{currentEvent.eventName}}  {{currentEvent.eventDate}}  {{currentEvent.eventLocation}}>
+  </li>
+</ul>
