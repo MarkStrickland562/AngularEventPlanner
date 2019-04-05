@@ -1,4 +1,4 @@
-import { Store } from './../models/store';
+import { Store } from './../models/store.model';
 
 stores: Store[] = [
   new Store(1, 'Costco'),

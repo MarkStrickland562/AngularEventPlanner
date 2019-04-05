@@ -1,4 +1,4 @@
-import { Menu } from './../models/menu';
+import { Menu } from './../models/menu.model';
 
 menus: Menu[] = [
   new Menu(1, 'Summer BBQ'),

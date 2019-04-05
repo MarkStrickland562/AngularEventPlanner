@@ -1,4 +1,4 @@
-import { MenuItem } from './../models/menuItem';
+import { MenuItem } from './../models/menuItem.model';
 
 menuItems: MenuItem[] = [
   new MenuItem(1,'Burgers'),

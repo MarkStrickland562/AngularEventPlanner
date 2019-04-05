@@ -1,4 +1,4 @@
-import { Event } from './../models/event';
+import { Event } from './../models/event.model';
 
 events: Event[] = [
   new Event(1, 'July 4th BBQ', new Date(2019, 6, 4), 'Woodland Park', 1),

@@ -1,4 +1,4 @@
-import { Invitee } from './../models/invitee';
+import { Invitee } from './../models/invitee.model';
 
 invitees: Invitee[] = [
   new Invitee(1, 'Mark Strickland', 'markstrickland562@hotmail.com'),
