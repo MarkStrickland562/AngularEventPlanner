@@ -340,6 +340,8 @@ Create and populate the following scripts for the model classes:
 
        $ git clone https://github.com/MarkStrickland562/AngularEventPlanner.git
 
+#### Setup Firebase Key
+
 #### Install, build and run the application
 1. Navigate to the application root directory:
 
