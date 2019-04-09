@@ -19,6 +19,15 @@ export class EventService {
     }
   }
 
+  getLastEventId() {
+    return eventList[eventList.length - 1].eventId;
+  }
+
+  addEvent(eventName, eventDate, eventLocation, menusId) {
+    let newEvent: Event = new Event(this.getLastEventId() + 1, eventName, eventDate, eventLocation, menusId);
+    eventList.push(newEvent);
+  }
+
   updateEvent(localUpdatedEvent){
     var eventToUpdate = this.getEventById(localUpdatedEvent.eventId);
     eventToUpdate.eventName = localUpdatedEvent.eventName;

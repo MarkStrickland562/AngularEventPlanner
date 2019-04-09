@@ -1,19 +1,34 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { Event } from '../models/event.model';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-new-event',
   templateUrl: './new-event.component.html',
-  styleUrls: ['./new-event.component.css']
+  styleUrls: ['./new-event.component.css'],
+  providers: [EventService]
 })
 
-export class NewEventComponent  {
-  @Input() lastEventId: number;
-  @Output() sendEvent = new EventEmitter();
+export class NewEventComponent implements OnInit {
 
-  submitForm(eventId: number, eventName: string, eventDate: Date = new Date(), eventLocation: string, menusId: number) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private location: Location,
+    private eventService: EventService) {}
 
-    let newEvent: Event = new Event(eventId, eventName, eventDate, eventLocation, menusId);
-    this.sendEvent.emit(newEvent);
+  ngOnInit() {
+  }
+
+  goToShowEventPage() {
+      this.router.navigate(['events']);
+  }
+
+  addEvent(eventName: string, eventDate: Date = new Date(), eventLocation: string, menusId: number) {
+    this.eventService.addEvent(eventName, eventDate, eventLocation, menusId);
+    this.goToShowEventPage();
   }
 }

@@ -5,6 +5,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ShowEventsComponent } from './show-events/show-events.component';
+import { NewEventComponent } from './new-event/new-event.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
 import { DeleteEventComponent } from './delete-event/delete-event.component';
 
@@ -24,6 +25,10 @@ const appRoutes: Routes = [
   {
     path: 'events',
     component: ShowEventsComponent
+  },
+  {
+    path: 'new-event',
+    component: NewEventComponent
   },
   {
     path: 'edit-event/:id',

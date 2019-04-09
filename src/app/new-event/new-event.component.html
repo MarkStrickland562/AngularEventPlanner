@@ -6,5 +6,5 @@
  <input #newEventDate type="date">
  <label>Enter Event Location:</label>
  <input #newEventLocation>
-  <button (click)="submitForm(lastEventId + 1, newEventName.value, newEventDate.value, newEventLocation.value, 1); newEventName.value=''; newEventDate.value=''; newEventLocation.value='';">Add Event</button>
+  <button (click)="addEvent(newEventName.value, newEventDate.value, newEventLocation.value, 1); newEventName.value=''; newEventDate.value=''; newEventLocation.value='';">Add Event</button>
 </div>

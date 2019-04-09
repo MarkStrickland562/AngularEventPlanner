@@ -12,7 +12,6 @@ import { EventService } from '../event.service';
 
 export class ShowEventsComponent implements OnInit {
 
-  lastEventId = 0;
   selectedEvent = null;
   selectedEventToDelete = null;
 
@@ -22,35 +21,18 @@ export class ShowEventsComponent implements OnInit {
 
   ngOnInit() {
     this.eventList = this.eventService.getEvents();
-    this.getLastEventId();
   }
 
-  getLastEventId() {
-    this.lastEventId = this.eventList[this.eventList.length - 1].eventId;
-  }
-
-  editEvent(clickedEvent: Event) {
+    editEvent(clickedEvent: Event) {
     this.selectedEvent = clickedEvent;
   }
-
-  addEvent(newEvent: Event) {
-     this.eventList.push(newEvent);
-     this.getLastEventId();
-   }
 
   finishedEditing() {
     this.selectedEvent = null;
   }
 
-  confirmDeleteEvent(clickedEvent: Event) {
-    this.selectedEventToDelete = clickedEvent;
-  }
-
-  // deleteEvent(confirmDelete: string) {
-  //   if (confirmDelete === "true") {
-  //     eventList.splice(eventList.indexOf(this.selectedEventToDelete), 1);
-  //   }
-  //   this.selectedEventToDelete = null;
+  // confirmDeleteEvent(clickedEvent: Event) {
+  //   this.selectedEventToDelete = clickedEvent;
   // }
 
   goToEditEventPage(clickedEvent: Event) {
@@ -59,5 +41,9 @@ export class ShowEventsComponent implements OnInit {
 
   goToDeleteEventPage(clickedEvent: Event) {
       this.router.navigate(['delete-event', clickedEvent.eventId]);
+  }
+
+  goToAddEventPage() {
+    this.router.navigate(['new-event']);
   }
 }
