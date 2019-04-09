@@ -1,14 +1,10 @@
-<h2>This event has id number: {{eventId}}</h2>
-
-<!-- <div *ngIf="selectedEventToEdit">
-  <h3>Update Event</h3>
-  <h4>{{childSelectedEvent.eventName}}</h4>
-  <h4>Edit Event</h4>
-  <label>Update Event Name:</label>
-  <input [(ngModel)]="childSelectedEvent.eventName">
-  <label>Update Event Date:</label>
-  <input [(ngModel)]="childSelectedEvent.eventDate">
-  <label>Update Event Location:</label>
-  <input [(ngModel)]="childSelectedEvent.eventLocation">
-  <button (click)="finishedEditing()">Done</button>
-</div> -->
+<h3>Update Event</h3>
+<h4>{{eventToUpdate.eventName}}</h4>
+<h4>Update Event</h4>
+<label>Event Name:</label>
+<input [(ngModel)]="eventToUpdate.eventName">
+<label>Event Date:</label>
+<input [(ngModel)]="eventToUpdate.eventDate">
+<label>Event Location:</label>
+<input [(ngModel)]="eventToUpdate.eventLocation">
+<button (click)="updateEvent(eventToUpdate)">Done</button>

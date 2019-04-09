@@ -6,6 +6,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ShowEventsComponent } from './show-events/show-events.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
+import { DeleteEventComponent } from './delete-event/delete-event.component';
 
 const appRoutes: Routes = [
   {
@@ -27,6 +28,10 @@ const appRoutes: Routes = [
   {
     path: 'edit-event/:id',
     component: EditEventComponent
+  },
+  {
+    path: 'delete-event/:id',
+    component: DeleteEventComponent
   }
 ];
 

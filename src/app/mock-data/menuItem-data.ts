@@ -1,6 +1,6 @@
 import { MenuItem } from './../models/menuItem.model';
 
-export var menuItemList: MenuItem[] = [
+export const menuItemList: MenuItem[] = [
   new MenuItem(1,'Burgers'),
   new MenuItem(2, 'Hot Dogs'),
   new MenuItem(3, 'Potato Chips'),

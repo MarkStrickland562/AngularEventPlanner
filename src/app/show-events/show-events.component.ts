@@ -1,15 +1,16 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { eventList } from '../mock-data/event-data';
 import { Event } from '../models/event.model';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-show-events',
   templateUrl: './show-events.component.html',
-  styleUrls: ['./show-events.component.css']
+  styleUrls: ['./show-events.component.css'],
+  providers: [EventService]
 })
 
-export class ShowEventsComponent  {
+export class ShowEventsComponent implements OnInit {
 
   lastEventId = 0;
   selectedEvent = null;
@@ -17,10 +18,10 @@ export class ShowEventsComponent  {
 
   eventList: Event[];
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private eventService: EventService){}
 
   ngOnInit() {
-    this.eventList = eventList;
+    this.eventList = this.eventService.getEvents();
     this.getLastEventId();
   }
 
@@ -45,18 +46,18 @@ export class ShowEventsComponent  {
     this.selectedEventToDelete = clickedEvent;
   }
 
-  deleteEvent(confirmDelete: string) {
-    if (confirmDelete === "true") {
-      eventList.splice(eventList.indexOf(this.selectedEventToDelete), 1);
-    }
-    this.selectedEventToDelete = null;
-  }
+  // deleteEvent(confirmDelete: string) {
+  //   if (confirmDelete === "true") {
+  //     eventList.splice(eventList.indexOf(this.selectedEventToDelete), 1);
+  //   }
+  //   this.selectedEventToDelete = null;
+  // }
 
   goToEditEventPage(clickedEvent: Event) {
       this.router.navigate(['edit-event', clickedEvent.eventId]);
   }
 
-  // deleteButtonClicked(eventToDelete: Event) {
-  //   this.clickDeleteSender.emit(eventToDelete);
-  // }
+  goToDeleteEventPage(clickedEvent: Event) {
+      this.router.navigate(['delete-event', clickedEvent.eventId]);
+  }
 }

@@ -1,6 +1,6 @@
 import { Store } from './../models/store.model';
 
-export var storeList: Store[] = [
+export const storeList: Store[] = [
   new Store(1, 'Costco'),
   new Store(2, 'Cash & Carry'),
   new Store(3, 'Grocery Outlet'),

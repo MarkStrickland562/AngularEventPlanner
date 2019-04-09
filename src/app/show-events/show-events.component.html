@@ -1,5 +1,5 @@
 <h3>Event List</h3>
 <ul>
-  <li *ngFor="let currentEvent of eventList">{{currentEvent.eventName}}  {{currentEvent.eventDate}}  {{currentEvent.eventLocation}} <button (click)="goToEditEventPage(currentEvent)">Update!</button>  <button (click)="deleteButtonClicked(currentEvent)">Delete!</button>
+  <li *ngFor="let currentEvent of eventList">{{currentEvent.eventName}}  {{currentEvent.eventDate}}  {{currentEvent.eventLocation}} <button (click)="goToEditEventPage(currentEvent)">Update!</button>  <button (click)="goToDeleteEventPage(currentEvent)">Delete!</button>
   </li>
 </ul>
