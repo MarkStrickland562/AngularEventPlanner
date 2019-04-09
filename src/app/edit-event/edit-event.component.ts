@@ -1,4 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { Event } from '../models/event.model';
 
 @Component({
@@ -7,11 +9,18 @@ import { Event } from '../models/event.model';
   styleUrls: ['./edit-event.component.css']
 })
 
-export class EditEventComponent  {
-  @Input() childSelectedEvent: Event;
-  @Output() clickedDone = new EventEmitter();
+export class EditEventComponent implements OnInit {
+  eventId: number = null;
+
+  constructor(private route: ActivatedRoute, private location: Location) {}
+
+  ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+    this.eventId = parseInt(urlParameters['id']);
+   })
+  }
 
   finishedEditing() {
-    this.clickedDone.emit();
+//    this.clickedDone.emit();
   }
 }

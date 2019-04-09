@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { routing } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ShowEventsComponent } from './show-events/show-events.component';
@@ -42,6 +44,7 @@ import { DeleteInviteeComponent } from './delete-invitee/delete-invitee.componen
 import { SearchInviteeComponent } from './search-invitee/search-invitee.component';
 
 import { SearchEventPipe } from './search-event.pipe';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -83,11 +86,13 @@ import { SearchEventPipe } from './search-event.pipe';
     EditInviteeComponent,
     DeleteInviteeComponent,
     SearchInviteeComponent,
-    SearchEventPipe
+    SearchEventPipe,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <h2>
-    Plan your next fabulous event</h2>
-    <button type="button"><a>ENTER</a></button>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
-<app-show-events [childEventList]="eventList" (clickSender)="editEvent($event)" (clickDeleteSender)="confirmDeleteEvent($event)"></app-show-events>
+<!-- <app-show-events [childEventList]="eventList" (clickSender)="editEvent($event)" (clickDeleteSender)="confirmDeleteEvent($event)"></app-show-events>
 <app-new-event [lastEventId]="lastEventId" (sendEvent)="addEvent($event)"></app-new-event>
 <app-edit-event [childSelectedEvent]="selectedEvent" (clickedDone)="finishedEditing()"></app-edit-event>
 <app-delete-event [eventToDelete]="selectedEventToDelete" (deleteEvent)="deleteEvent($event)"></app-delete-event>
@@ -17,4 +11,4 @@
 <app-show-menu-item-ingredients></app-show-menu-item-ingredients>
 <app-show-tasks></app-show-tasks>
 <app-show-stores></app-show-stores>
-<app-show-invitees></app-show-invitees>
+<app-show-invitees></app-show-invitees> -->
