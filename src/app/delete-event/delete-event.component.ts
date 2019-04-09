@@ -8,11 +8,10 @@ import { Event } from '../models/event.model';
 })
 
 export class DeleteEventComponent {
+  @Input() eventToDelete: Event;
   @Output() deleteEvent = new EventEmitter();
 
-  submitForm(confirmDelete) {
-    if (confirmDelete === 'Y') {
-    this.deleteEvent.emit();
-    }
+  onSelect(event: any) {
+    this.deleteEvent.emit(event.target.value);
   }
 }

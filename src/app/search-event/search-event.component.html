@@ -1,3 +1,9 @@
-<p>
-  search-event works!
-</p>
+<h3>Search for an Event</h3>
+<div>
+  <label>Enter Part or All of the Event Name:</label>
+  <input [(ngModel)]="searchString" placeholder="Enter search string here">
+  <ul>
+    <li *ngFor="let foundEvent of searchEventList | SearchEventPipe : searchString">{{foundEvent.eventName}}  {{foundEvent.eventDate}}  {{foundEvent.eventLocation}}
+    </li>
+  </ul>
+</div>

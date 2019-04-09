@@ -1,9 +1,10 @@
-<div *ngIf="childSelectedEvent">
+<div *ngIf="eventToDelete">
   <h3>Delete Event</h3>
   <label>Confirm Delete [Y/N]:</label>
-  <select #confirmDelete>
-    <option [value]="N">No</option>
-    <option [value]="Y">Yes</option>
+  <select (change)="onSelect($event)">
+    <option value="undefined" disabled></option>
+    <option value=false>No</option>
+    <option value=true>Yes</option>
   </select>
-  <button (click)="submitForm(confirmDelete.value)">Confirm</button>
+  <!-- <button (click)="submitForm('Y')">Confirm</button> -->
 </div>

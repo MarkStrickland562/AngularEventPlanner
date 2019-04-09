@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Event } from '../models/event.model';
-import { eventList } from './../mock-data/event-data';
 
 @Component({
   selector: 'app-show-events',
@@ -9,12 +8,16 @@ import { eventList } from './../mock-data/event-data';
 })
 
 export class ShowEventsComponent  {
-  eventList = eventList
 
   @Input() childEventList: Event[];
   @Output() clickSender = new EventEmitter();
+  @Output() clickDeleteSender = new EventEmitter();
 
   editButtonClicked(eventToEdit: Event) {
     this.clickSender.emit(eventToEdit);
+  }
+
+  deleteButtonClicked(eventToDelete: Event) {
+    this.clickDeleteSender.emit(eventToDelete);
   }
 }

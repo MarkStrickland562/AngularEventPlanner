@@ -41,6 +41,7 @@ import { EditInviteeComponent } from './edit-invitee/edit-invitee.component';
 import { DeleteInviteeComponent } from './delete-invitee/delete-invitee.component';
 import { SearchInviteeComponent } from './search-invitee/search-invitee.component';
 
+import { SearchEventPipe } from './search-event.pipe';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { SearchInviteeComponent } from './search-invitee/search-invitee.componen
     NewInviteeComponent,
     EditInviteeComponent,
     DeleteInviteeComponent,
-    SearchInviteeComponent
+    SearchInviteeComponent,
+    SearchEventPipe
   ],
   imports: [
     BrowserModule,
