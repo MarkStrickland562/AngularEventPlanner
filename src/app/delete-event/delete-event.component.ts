@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+
 import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 
@@ -12,9 +14,9 @@ import { EventService } from '../event.service';
   providers: [EventService]
 })
 
-export class DeleteEventComponent {
-  eventId: number = null;
-  eventToDelete: Event;
+export class DeleteEventComponent implements OnInit {
+  eventId: string;
+  eventToDelete;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,9 +26,11 @@ export class DeleteEventComponent {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.eventId = parseInt(urlParameters['id']);
+      this.eventId = urlParameters['id'];
     });
-    this.eventToDelete = this.eventService.getEventById(this.eventId);
+    this.eventService.getEventById(this.eventId).subscribe(dataLastEmittedFromObserver => {
+      this.eventToDelete = dataLastEmittedFromObserver;
+    })
   }
 
   goToShowEventPage(){

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
 import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 
@@ -12,10 +13,9 @@ import { EventService } from '../event.service';
 
 export class ShowEventsComponent implements OnInit {
 
+  eventList: FirebaseListObservable<any[]>;
   selectedEvent = null;
   selectedEventToDelete = null;
-
-  eventList: Event[];
 
   constructor(private router: Router, private eventService: EventService){}
 
@@ -23,7 +23,7 @@ export class ShowEventsComponent implements OnInit {
     this.eventList = this.eventService.getEvents();
   }
 
-    editEvent(clickedEvent: Event) {
+  editEvent(clickedEvent: Event) {
     this.selectedEvent = clickedEvent;
   }
 
@@ -31,16 +31,12 @@ export class ShowEventsComponent implements OnInit {
     this.selectedEvent = null;
   }
 
-  // confirmDeleteEvent(clickedEvent: Event) {
-  //   this.selectedEventToDelete = clickedEvent;
-  // }
-
-  goToEditEventPage(clickedEvent: Event) {
-      this.router.navigate(['edit-event', clickedEvent.eventId]);
+  goToEditEventPage(clickedEvent) {
+    this.router.navigate(['edit-event', clickedEvent.$key]);
   }
 
-  goToDeleteEventPage(clickedEvent: Event) {
-      this.router.navigate(['delete-event', clickedEvent.eventId]);
+  goToDeleteEventPage(clickedEvent) {
+    this.router.navigate(['delete-event', clickedEvent.$key]);
   }
 
   goToAddEventPage() {

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+
 import { Event } from '../models/event.model';
 import { EventService } from '../event.service';
 
@@ -13,8 +15,9 @@ import { EventService } from '../event.service';
 })
 
 export class EditEventComponent implements OnInit {
-  eventId: number = null;
-  eventToUpdate: Event;
+
+  eventId: string;
+  eventToUpdate;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,9 +27,11 @@ export class EditEventComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.eventId = parseInt(urlParameters['id']);
+      this.eventId = urlParameters['id'];
     });
-    this.eventToUpdate = this.eventService.getEventById(this.eventId);
+    this.eventService.getEventById(this.eventId).subscribe(dataLastEmittedFromObserver => {
+      this.eventToUpdate = dataLastEmittedFromObserver;
+    })
   }
 
   goToShowEventPage() {

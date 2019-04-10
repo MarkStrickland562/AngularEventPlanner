@@ -1,43 +1,37 @@
 import { Injectable } from '@angular/core';
-import { eventList } from './mock-data/event-data';
 import { Event } from './models/event.model';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class EventService {
+  eventList: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+    this.eventList = database.list('events');
+  }
 
   getEvents() {
-    return eventList;
+    return this.eventList;
   }
 
-  getEventById(eventId: number){
-    for (var i = 0; i <= eventList.length - 1; i++) {
-      if (eventList[i].eventId === eventId) {
-        return eventList[i];
-      }
-    }
+  getEventById(eventId: string) {
+    return this.database.object('/events/' + eventId);
   }
 
-  getLastEventId() {
-    return eventList[eventList.length - 1].eventId;
-  }
-
-  addEvent(eventName, eventDate, eventLocation, menusId) {
-    let newEvent: Event = new Event(this.getLastEventId() + 1, eventName, eventDate, eventLocation, menusId);
-    eventList.push(newEvent);
+  addEvent(newEvent: Event) {
+    this.eventList.push(newEvent);
   }
 
   updateEvent(localUpdatedEvent){
-    var eventToUpdate = this.getEventById(localUpdatedEvent.eventId);
-    eventToUpdate.eventName = localUpdatedEvent.eventName;
-    eventToUpdate.eventDate = localUpdatedEvent.eventDate;
-    eventToUpdate.eventLocation = localUpdatedEvent.eventLocation;
+    var eventInFirebase = this.getEventById(localUpdatedEvent.$key);
+    eventInFirebase.update({eventName: localUpdatedEvent.eventName,
+                            eventDate: localUpdatedEvent.eventDate,
+                            eventLocation: localUpdatedEvent.eventLocation,
+                            menusId: localUpdatedEvent.menusId});
   }
 
   deleteEvent(eventToBeDeleted){
-    var eventToDelete = this.getEventById(eventToBeDeleted.eventId);
-    eventList.splice(eventList.indexOf(eventToDelete), 1);
+    var eventToDeleteInFirebase = this.getEventById(eventToBeDeleted.$key);
+    eventToDeleteInFirebase.remove();
   }
-
 }
