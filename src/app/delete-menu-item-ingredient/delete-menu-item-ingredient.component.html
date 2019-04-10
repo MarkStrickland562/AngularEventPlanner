@@ -1,3 +1,8 @@
-<p>
-  delete-menu-item-ingredient works!
-</p>
+<h3>Delete Ingredient</h3>
+<label>Confirm Delete [Y/N]:</label>
+<select (change)="onSelect($event)">
+  <option value="undefined" disabled></option>
+  <option value=false>No</option>
+  <option value=true>Yes</option>
+</select>
+<button (click)="submitForm('Y')">Confirm</button>

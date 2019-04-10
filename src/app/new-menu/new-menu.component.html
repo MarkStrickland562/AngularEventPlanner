@@ -1,3 +1,6 @@
-<p>
-  new-menu works!
-</p>
+<h3>Add New Menu</h3>
+<div>
+ <label>Enter Menu Theme:</label>
+ <input #newMenuTheme>
+ <button (click)="addMenu(newMenuTheme.value); newMenuTheme.value='';">Add Menu</button>
+</div>

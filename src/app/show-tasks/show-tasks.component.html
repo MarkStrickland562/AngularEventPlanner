@@ -1,5 +1,6 @@
 <h3>Task List</h3>
 <ul>
-  <li *ngFor="let currentTask of taskList">{{currentTask.taskDescription}}  {{currentTask.taskPlannedStartDateTime}}
+  <li *ngFor="let currentTask of taskList | async">{{currentTask.taskDescription}}  {{currentTask.taskPlannedStartDateTime}}  <button (click)="goToEditTaskPage(currentTask)">Update!</button>  <button (click)="goToDeleteTaskPage(currentTask)">Delete!</button>
   </li>
 </ul>
+<button (click)="goToAddTaskPage()">Add Task</button>

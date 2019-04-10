@@ -1,4 +1,3 @@
 export class MenuItem {
-  constructor(public menuItemId: number,
-              public menuItemDescription: string) {}
+  constructor(public menuItemDescription: string) {}
 }

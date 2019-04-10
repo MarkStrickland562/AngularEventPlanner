@@ -1,3 +1,5 @@
-<p>
-  edit-menu works!
-</p>
+<h3>Update Menu</h3>
+<h4>{{menuToUpdate.menuTheme}}</h4>
+<label>Menu Theme:</label>
+<input [(ngModel)]="menuToUpdate.menuTheme">
+<button (click)="updateMenu(menuToUpdate)">Done</button>

@@ -1,3 +1,5 @@
-<p>
-  edit-store works!
-</p>
+<h3>Update Store</h3>
+<h4>{{storeToUpdate.storeName}}</h4>
+<label>Store Name:</label>
+<input [(ngModel)]="storeToUpdate.storeName">
+<button (click)="updateStore(storeToUpdate)">Done</button>

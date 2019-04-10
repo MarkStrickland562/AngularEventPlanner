@@ -1,3 +1,6 @@
-<p>
-  new-menu-item works!
-</p>
+<h3>Add New Entree</h3>
+<div>
+ <label>Enter Entree Description:</label>
+ <input #newMenuItemDescription>
+  <button (click)="addMenuItem(newMenuItemDescription.value); newMenuItemDescription.value='';">Add Entree</button>
+</div>

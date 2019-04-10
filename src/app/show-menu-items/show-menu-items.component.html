@@ -1,5 +1,6 @@
-<h3>Menu Item List</h3>
+<h3>Entree List</h3>
 <ul>
-  <li *ngFor="let currentMenuItem of menuItemList">{{currentMenuItem.menuItemDescription}}
+  <li *ngFor="let currentMenuItem of menuItemList | async">{{currentMenuItem.menuItemDescription}}  <button (click)="goToEditMenuItemPage(currentMenuItem)">Update!</button>  <button (click)="goToDeleteMenuItemPage(currentMenuItem)">Delete!</button>
   </li>
 </ul>
+<button (click)="goToAddMenuItemPage()">Add Menu Item</button>

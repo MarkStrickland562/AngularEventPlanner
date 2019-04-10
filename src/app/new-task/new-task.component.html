@@ -1,3 +1,8 @@
-<p>
-  new-task works!
-</p>
+<h3>Add New Task</h3>
+<div>
+  <label>Enter Task Description:</label>
+  <input #newTaskDescription>
+  <label>Enter Task Planned Start Date:</label>
+  <input #newTaskPlannedStartDateTime type="datetime-local">
+  <button (click)="addTask(newTaskDescription.value, newTaskPlannedStartDateTime.value); newTaskDescription.value=''; newTaskPlannedStartDateTime.value='';">Add Task</button>
+</div>

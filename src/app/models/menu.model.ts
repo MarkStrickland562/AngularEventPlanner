@@ -1,4 +1,3 @@
 export class Menu {
-  constructor (public menuId: number,
-               public menuTheme: string){}
+  constructor (public menuTheme: string) {}
 }

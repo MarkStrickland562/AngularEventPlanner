@@ -1,3 +1,7 @@
-<p>
-  edit-task works!
-</p>
+<h3>Update Task</h3>
+<h4>{{taskToUpdate.taskDescription}}</h4>
+<label>Task Description:</label>
+<input [(ngModel)]="taskToUpdate.taskDescription">
+<label>Task Planned Start Date:</label>
+<input [(ngModel)]="taskToUpdate.taskPlannedStartDateTime">
+<button (click)="updateTask(taskToUpdate)">Done</button>

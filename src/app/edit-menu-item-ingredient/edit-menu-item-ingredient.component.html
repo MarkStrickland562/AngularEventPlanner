@@ -1,3 +1,5 @@
-<p>
-  edit-menu-item-ingredient works!
-</p>
+<h3>Update Ingredient</h3>
+<h4>{{menuItemIngredientToUpdate.ingredientDescription}}</h4>
+<label>Ingredient Description:</label>
+<input [(ngModel)]="menuItemIngredientToUpdate.ingredientDescription">
+<button (click)="updateMenuItemIngredient(menuItemIngredientToUpdate)">Done</button>

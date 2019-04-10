@@ -47,9 +47,14 @@ import { NewInviteeComponent } from './new-invitee/new-invitee.component';
 import { EditInviteeComponent } from './edit-invitee/edit-invitee.component';
 import { DeleteInviteeComponent } from './delete-invitee/delete-invitee.component';
 import { SearchInviteeComponent } from './search-invitee/search-invitee.component';
-
-import { SearchEventPipe } from './search-event.pipe';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SearchEventPipe } from './search-event.pipe';
+import { SearchMenuPipe } from './search-menu.pipe';
+import { SearchMenuItemPipe } from './search-menu-item.pipe';
+import { SearchMenuItemIngredientPipe } from './search-menu-item-ingredient.pipe';
+import { SearchTaskPipe } from './search-task.pipe';
+import { SearchStorePipe } from './search-store.pipe';
+import { SearchInviteePipe } from './search-invitee.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -98,8 +103,14 @@ export const firebaseConfig = {
     EditInviteeComponent,
     DeleteInviteeComponent,
     SearchInviteeComponent,
+    WelcomeComponent,
     SearchEventPipe,
-    WelcomeComponent
+    SearchMenuPipe,
+    SearchMenuItemPipe,
+    SearchMenuItemIngredientPipe,
+    SearchTaskPipe,
+    SearchInviteePipe,
+    SearchStorePipe
   ],
   imports: [
     BrowserModule,

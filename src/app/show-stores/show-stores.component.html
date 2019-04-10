@@ -1,5 +1,6 @@
 <h3>Store List</h3>
 <ul>
-  <li *ngFor="let currentStore of storeList">{{currentStore.storeName}}
+  <li *ngFor="let currentStore of storeList | async">{{currentStore.storeName}}  <button (click)="goToEditStorePage(currentStore)">Update!</button>  <button (click)="goToDeleteStorePage(currentStore)">Delete!</button>
   </li>
 </ul>
+<button (click)="goToAddStorePage()">Add Store</button>

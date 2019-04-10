@@ -1,5 +1,6 @@
 <h3>Menu List</h3>
 <ul>
-  <li *ngFor="let currentMenu of menuList">{{currentMenu.menuTheme}}
+  <li *ngFor="let currentMenu of menuList | async">{{currentMenu.menuTheme}}  <button (click)="goToEditMenuPage(currentMenu)">Update!</button>  <button (click)="goToDeleteMenuPage(currentMenu)">Delete!</button>
   </li>
 </ul>
+<button (click)="goToAddMenuPage()">Add Menu</button>

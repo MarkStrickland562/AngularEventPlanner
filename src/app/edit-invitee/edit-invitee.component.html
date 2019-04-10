@@ -1,3 +1,7 @@
-<p>
-  edit-invitee works!
-</p>
+<h3>Update Guest</h3>
+<h4>{{inviteeToUpdate.inviteeName}}</h4>
+<label>Guest Name:</label>
+<input [(ngModel)]="inviteeToUpdate.inviteeName">
+<label>Guest Email Address:</label>
+<input [(ngModel)]="inviteeToUpdate.inviteeEmailAddress">
+<button (click)="updateInvitee(inviteeToUpdate)">Done</button>
