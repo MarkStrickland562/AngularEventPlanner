@@ -1,7 +1,7 @@
 <h3>Update Task</h3>
-<h4>{{taskToUpdate.taskDescription}}</h4>
+<h4>{{taskToUpdate?.taskDescription}}</h4>
 <label>Task Description:</label>
-<input [(ngModel)]="taskToUpdate.taskDescription">
+<input [ngModel]="taskToUpdate?.taskDescription" (ngModelChange)="taskToUpdate.taskDescription = $event">
 <label>Task Planned Start Date:</label>
-<input [(ngModel)]="taskToUpdate.taskPlannedStartDateTime">
+<input [ngModel]="taskToUpdate?.taskPlannedStartDateTime" (ngModelChange)="taskToUpdate.taskPlannedStartDateTime = $event">
 <button (click)="updateTask(taskToUpdate)">Done</button>

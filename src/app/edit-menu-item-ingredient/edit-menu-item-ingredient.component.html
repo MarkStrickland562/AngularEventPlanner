@@ -1,5 +1,5 @@
 <h3>Update Ingredient</h3>
-<h4>{{menuItemIngredientToUpdate.ingredientDescription}}</h4>
+<h4>{{menuItemIngredientToUpdate?.ingredientDescription}}</h4>
 <label>Ingredient Description:</label>
-<input [(ngModel)]="menuItemIngredientToUpdate.ingredientDescription">
+<input [ngModel]="menuItemIngredientToUpdate?.ingredientDescription" (ngModelChange)="menuItemIngredientToUpdate.ingredientDescription = $event">
 <button (click)="updateMenuItemIngredient(menuItemIngredientToUpdate)">Done</button>

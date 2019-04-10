@@ -1,5 +1,5 @@
 <h3>Update Entree</h3>
-<h4>{{menuItemToUpdate.menuItemDescription}}</h4>
+<h4>{{menuItemToUpdate?.menuItemDescription}}</h4>
 <label>Entree Description:</label>
-<input [(ngModel)]="menuItemToUpdate.menuItemDescription">
+<input [ngModel]="menuItemToUpdate?.menuItemDescription" (ngModelChange)="menuItemToUpdate.memuItemDescription = $event">
 <button (click)="updateMenuItem(menuItemToUpdate)">Done</button>

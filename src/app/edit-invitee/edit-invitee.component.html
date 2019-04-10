@@ -1,7 +1,7 @@
 <h3>Update Guest</h3>
-<h4>{{inviteeToUpdate.inviteeName}}</h4>
+<h4>{{inviteeToUpdate?.inviteeName}}</h4>
 <label>Guest Name:</label>
-<input [(ngModel)]="inviteeToUpdate.inviteeName">
+<input [ngModel]="inviteeToUpdate?.inviteeName" (ngModelChange)="inviteeToUpdate.inviteeName = $event">
 <label>Guest Email Address:</label>
-<input [(ngModel)]="inviteeToUpdate.inviteeEmailAddress">
+<input [ngModel]="inviteeToUpdate?.inviteeEmailAddress" (ngModelChange)="inviteeToUpdate.inviteeEmailAddress = $event">
 <button (click)="updateInvitee(inviteeToUpdate)">Done</button>

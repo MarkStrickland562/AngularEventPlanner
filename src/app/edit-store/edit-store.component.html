@@ -1,5 +1,5 @@
 <h3>Update Store</h3>
-<h4>{{storeToUpdate.storeName}}</h4>
+<h4>{{storeToUpdate?.storeName}}</h4>
 <label>Store Name:</label>
-<input [(ngModel)]="storeToUpdate.storeName">
+<input [ngModel]="storeToUpdate?.storeName" (ngModelChange)="storeToUpdate.storeName = $event">
 <button (click)="updateStore(storeToUpdate)">Done</button>

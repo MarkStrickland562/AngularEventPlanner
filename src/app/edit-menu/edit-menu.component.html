@@ -1,5 +1,5 @@
 <h3>Update Menu</h3>
-<h4>{{menuToUpdate.menuTheme}}</h4>
+<h4>{{menuToUpdate?.menuTheme}}</h4>
 <label>Menu Theme:</label>
-<input [(ngModel)]="menuToUpdate.menuTheme">
+<input [ngModel]="menuToUpdate?.menuTheme" (ngModelChange)="menuToUpdate.menuTheme = $event">
 <button (click)="updateMenu(menuToUpdate)">Done</button>
