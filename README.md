@@ -21,9 +21,9 @@ Much of the styling has been kept from the C# project and credit for the styling
 
 ## Project Plan
 
-#### Part One (Week #1)
-* Develop technical architecture.
-* Set up the project.
+### Part One (Week #1)
+###### 1) Develop technical architecture.
+###### 2) Set up the project.
 <details>
 <summary>Click Here for Details</summary>
 This assumes that node is already installed, but verify with "node -v".
@@ -48,7 +48,7 @@ This assumes that node is already installed, but verify with "node -v".
 4) Add the Forms Module to app.module.ts. In the top section of imports add "import { FormsModule } from '@angular/forms'". In the @ngModule section in the imports array, add ", FormsModule" after "BrowserModule".
 </details>
 
-* Create model classes for the data.
+###### 3) Create model classes for the data.
 <details>
 <summary>Click Here for Details</summary>
 Create and populate the following scripts for the model classes:
@@ -93,7 +93,7 @@ Create and populate the following scripts for the model classes:
 </table>
 </details>
 
-* Create scripts to add mock data.
+###### 4) Create scripts to add mock data.
 <details>
 <summary>Click Here for Details</summary>
 <table>
@@ -132,7 +132,7 @@ Create and populate the following scripts for the model classes:
 </table>
 </details>
 
-* Create component templates for showing, adding, editing, deleting and searching for model-related objects.
+###### 5) Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
 1) Create the Welcone,, About and Main child components by executing the following command at the bash prompt:
@@ -183,20 +183,20 @@ Create and populate the following scripts for the model classes:
     $ ng generate component search-invitee
 </details>
 
-* Develop views for showing data for all model classes.
-* Develop functional CRUD views for Events.
-* Create pipes for use by the Search components.
-* Add basic styling in a single page.
+###### 6) Develop views for showing data for all model classes.
+###### 7) Develop functional CRUD views for Events.
+###### 8) Create pipes for use by the Search components.
+###### 9) Add basic styling in a single page.
 
-#### Part Two (Week #2)
-* Add routes for the components and convert to routing.
-* Complete development of CRUD and Search functionality for all classes.
-* Convert the mock data into JSON and load the data into a Firebase database.
-* Add services and dependency-injection for accessing the database.
-* Add deployment to Firebase.
-* Add an API call.
-* Add user authentication
-* Incorporate the styling from the C# project.
+### Part Two (Week #2)
+###### 1) Add routes for the components and convert to routing.
+###### 2) Complete development of CRUD and Search functionality for all classes.
+###### 3) Convert the mock data into JSON and load the data into a Firebase database.
+###### 4) Add services and dependency-injection for accessing the database.
+###### 5) Add deployment to Firebase.
+###### 6) Add an API call.
+###### 7) Add user authentication
+###### 8) Incorporate the styling from the C# project.
 
 ## Technical Architecture
 
