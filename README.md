@@ -6,14 +6,14 @@
 
 ## **eHappenings Event Planner (Angular)**
 
-###### Created April 5th, 2019.
+###### Created April 5, 2019. Finalized April 12, 2019.
 
 ----------
 
 ## Description
 This project is a re-development of a C#-based team project from the Epicodus C# class called *eHappenings*. The C# code has been converted to javascript and Angular
 and the C# Model/View/Controller structure has been converted to the Angular Model/View/Component structure.
-Much of the styling has been kept from the C# project and credit for the styling goes to Clara Munro and Micaela Jawor.
+Much of the styling has been kept from the C# project and credit for the styling goes to Clara Munro and Micaela Jawor. Credit for the format of this README largely goes to Shawn Lunsford.
 
 ## Known Bugs
 
@@ -135,7 +135,8 @@ Create and populate the following scripts for the model classes:
 * Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
-1) Create the About and Main child components by executing the following command at the bash prompt:
+1) Create the Welcone,, About and Main child components by executing the following command at the bash prompt:
+  $ ng generate component welcome
   $ ng generate component main
   $ ng generate component about
 2) Create the Event child components by executing the following commmands at the bash prompt:
@@ -184,18 +185,18 @@ Create and populate the following scripts for the model classes:
 
 * Develop views for showing data for all model classes.
 * Develop functional CRUD views for Events.
+* Create pipes for use by the Search components.
 * Add basic styling in a single page.
-* Add routes for the components.
 
 #### Part Two (Week #2)
-* Complete development of all CRUD views.
-* Move the data to a database.
+* Add routes for the components and convert to routing.
+* Complete development of CRUD and Search functionality for all classes.
+* Convert the mock data into JSON and load the data into a Firebase database.
 * Add services and dependency-injection for accessing the database.
 * Add deployment to Firebase.
 * Add an API call.
 * Add user authentication
-* Add route guards
-* Add styling.
+* Incorporate the styling from the C# project.
 
 ## Technical Architecture
 
@@ -210,38 +211,38 @@ Create and populate the following scripts for the model classes:
     </tr>
     <tr>
       <td>Event</td>
-      <td>eventId<br>eventName<br>eventLocation<br>menusId</td>
-      <td>number<br>string<br>string<br>number</td>
+      <td>eventName<br>eventLocation<br>menusId</td>
+      <td>string<br>string<br>number</td>
     </tr>    
     <tr>
       <td>Menu</td>
-      <td>menuId<br>menuTheme</td>
-      <td>number<br>string</td>
+      <td>menuTheme</td>
+      <td>string</td>
     </tr>   
     <tr>
       <td>Task</td>
-      <td>taskId<br>taskDescription<br>taskPlannedStartDateTime</td>
-      <td>number<br>string<br>Date</td>
+      <td>taskDescription<br>taskPlannedStartDateTime</td>
+      <td>string<br>Date</td>
     </tr>
     <tr>
       <td>Menu Item</td>
-      <td>menuItemId<br>menuItemDescription</td>
-      <td>number<br>string</td>
+      <td>menuItemDescription</td>
+      <td>string</td>
     </tr>
     <tr>
       <td>Menu Item Ingredient</td>
-      <td>menuItemIngredientId<br>ingredientDescription<br>menuItemsId<br>storeId</td>
-      <td>number<br>string<br>number<br>number</td>
+      <td>ingredientDescription<br>menuItemsId<br>storeId</td>
+      <td>string<br>number<br>number</td>
     </tr>
     <tr>
       <td>Store</td>
-      <td>storeId<br>storeName</td>
-      <td>number<br>string</td>
+      <td>storeName</td>
+      <td>string</td>
     </tr>
     <tr>
       <td>Invitee</td>
-      <td>inviteeId<br>inviteeName<br>inviteeEmailAddress</td>
-      <td>number<br>string<br>string</td>
+      <td>inviteeName<br>inviteeEmailAddress</td>
+      <td>string<br>string</td>
     </tr>
   </table>
 </details>
@@ -251,89 +252,367 @@ Create and populate the following scripts for the model classes:
 
   <table>
     <tr>
+      <th>General Components</th>
+    </tr>
+    <tr>
       <th>Component</th>
-      <th>Router Link</th>
+      <th>Selector</th>
       <th>Route URL</th>
       <th>Description</th>
     </tr>
     <tr>
-      <td>Root Component</td>
-      <td>N/A</td>
+      <td>AppComponent</td>
+      <td>app-root</td>
+      <td>N/A/</td>
+      <td>Default root component</td>
+    </tr>
+    <tr>
+      <td>WelcomeComponent</td>
+      <td>app-welcome</td>
       <td>http:/localhost:4200/</td>
       <td>Displays the Welcome page</td>
     </tr>
     <tr>
+      <td>MainComponent</td>
+      <td>app-main</td>
+      <td>http:/localhost:4200/main</td>
+      <td>Displays the main navigation page</td>
+    </tr>
       <td>AboutComponent</td>
-      <td>about-page</td>
+      <td>app-about</td>
       <td>http:/localhost:4200/about</td>
       <td>Displays the About page</td>
     </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Event Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
       <td>ShowEventsComponent</td>
-      <td>show-events-page</td>
+      <td>app-show-events</td>
       <td>http:/localhost:4200/events</td>
       <td>Displays the list of events</td>
     </tr>
     <tr>
       <td>NewEventComponent</td>
-      <td>new-event-page</td>
-      <td>http:/localhost:4200/newevent</td>
+      <td>app-new-event</td>
+      <td>http:/localhost:4200/new-event</td>
       <td>Displays a form for adding a new event</td>
     </tr>
     <tr>
       <td>EditEventComponent</td>
-      <td>edit-event-page</td>
-      <td>http:/localhost:4200/editevent/:id</td>
+      <td>app-edit-event</td>
+      <td>http:/localhost:4200/edit-event/:id</td>
       <td>Displays a form for editing an event</td>
     </tr>
     <tr>
       <td>DeleteEventComponent</td>
-      <td>delete-event-page</td>
-      <td>http:/localhost:4200/deleteevent/:id</td>
+      <td>app-delete-event</td>
+      <td>http:/localhost:4200/delete-event/:id</td>
       <td>Responds to a button click to delete an event</td>
     </tr>
     <tr>
       <td>SearchEventComponent</td>
-      <td>search-event-page</tdß>
-      <td>http:/localhost:4200/searchevent</td>
-      <td>Displays a form for searching for an event</td>
+      <td>app-search-event</td>
+      <td>http:/localhost:4200/search-event</td>
+      <td>Displays a form for searching for an event by event name</td>
     </tr>
   </table>
-
+  <table>
+    <tr>
+      <th>Menu Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ShowMenusComponent</td>
+      <td>app-show-menus</td>
+      <td>http:/localhost:4200/menus</td>
+      <td>Displays the list of menus</td>
+    </tr>
+    <tr>
+      <td>NewMenuComponent</td>
+      <td>app-new-menu</td>
+      <td>http:/localhost:4200/new-menu</td>
+      <td>Displays a form for adding a new menu</td>
+    </tr>
+    <tr>
+      <td>EditMenuComponent</td>
+      <td>app-edit-menu</td>
+      <td>http:/localhost:4200/edit-menu/:id</td>
+      <td>Displays a form for editing an menu</td>
+    </tr>
+    <tr>
+      <td>DeleteMenuComponent</td>
+      <td>app-delete-menu</td>
+      <td>http:/localhost:4200/delete-menu/:id</td>
+      <td>Responds to a button click to delete an menu</td>
+    </tr>
+    <tr>
+      <td>SearchMenuComponent</td>
+      <td>app-search-menu</td>
+      <td>http:/localhost:4200/search-menu</td>
+      <td>Displays a form for searching for an menu by menu theme</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>MenuItem Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ShowMenuItemsComponent</td>
+      <td>app-show-menu-items</td>
+      <td>http:/localhost:4200/menus</td>
+      <td>Displays the list of menus</td>
+    </tr>
+    <tr>
+      <td>NewMenuItemComponent</td>
+      <td>app-new-menu-item</td>
+      <td>http:/localhost:4200/new-menu</td>
+      <td>Displays a form for adding a new menu</td>
+    </tr>
+    <tr>
+      <td>EditMenuItemComponent</td>
+      <td>app-edit-menu-item</td>
+      <td>http:/localhost:4200/edit-menu/:id</td>
+      <td>Displays a form for editing an menu</td>
+    </tr>
+    <tr>
+      <td>DeleteMenuItemComponent</td>
+      <td>app-delete-menu-item</td>
+      <td>http:/localhost:4200/delete-menu/:id</td>
+      <td>Responds to a button click to delete an menu</td>
+    </tr>
+    <tr>
+      <td>SearchMenuItemComponent</td>
+      <td>app-search-menu-item</td>
+      <td>http:/localhost:4200/search-menu</td>
+      <td>Displays a form for searching for an menu by menu item description</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>MenuItemIngredient Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ShowMenuItemIngredientsComponent</td>
+      <td>app-show-menu-item-ingredients</td>
+      <td>http:/localhost:4200/menus</td>
+      <td>Displays the list of menus</td>
+    </tr>
+    <tr>
+      <td>NewMenuItemIngredientComponent</td>
+      <td>app-new-menu-item-ingredient</td>
+      <td>http:/localhost:4200/new-menu</td>
+      <td>Displays a form for adding a new menu</td>
+    </tr>
+    <tr>
+      <td>EditMenuItemIngredientComponent</td>
+      <td>app-edit-menu-item-ingredient</td>
+      <td>http:/localhost:4200/edit-menu/:id</td>
+      <td>Displays a form for editing an menu</td>
+    </tr>
+    <tr>
+      <td>DeleteMenuItemIngredientComponent</td>
+      <td>app-delete-menu-item-ingredient</td>
+      <td>http:/localhost:4200/delete-menu/:id</td>
+      <td>Responds to a button click to delete an menu</td>
+    </tr>
+    <tr>
+      <td>SearchMenuItemIngredientComponent</td>
+      <td>app-search-menu-item-ingredient</td>
+      <td>http:/localhost:4200/search-menu</td>
+      <td>Displays a form for searching for an menu by ingredient description</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Task Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ShowTasksComponent</td>
+      <td>app-show-tasks</td>
+      <td>http:/localhost:4200/menus</td>
+      <td>Displays the list of menus</td>
+    </tr>
+    <tr>
+      <td>NewTaskComponent</td>
+      <td>app-new-task</td>
+      <td>http:/localhost:4200/new-menu</td>
+      <td>Displays a form for adding a new menu</td>
+    </tr>
+    <tr>
+      <td>EditTaskComponent</td>
+      <td>app-edit-task</td>
+      <td>http:/localhost:4200/edit-menu/:id</td>
+      <td>Displays a form for editing an menu</td>
+    </tr>
+    <tr>
+      <td>DeleteTaskComponent</td>
+      <td>app-delete-task</td>
+      <td>http:/localhost:4200/delete-menu/:id</td>
+      <td>Responds to a button click to delete an menu</td>
+    </tr>
+    <tr>
+      <td>SearchTaskComponent</td>
+      <td>app-search-task</td>
+      <td>http:/localhost:4200/search-menu</td>
+      <td>Displays a form for searching for an menu by task description</td>
+    </tr>
+  </table>
+  <table>
+  <tr>
+    <th>Store Components</th>
+  </tr>  
+  <tr>
+    <th>Component</th>
+    <th>Selector</th>
+    <th>Route URL</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>ShowStoresComponent</td>
+    <td>app-show-stores</td>
+    <td>http:/localhost:4200/menus</td>
+    <td>Displays the list of menus</td>
+  </tr>
+  <tr>
+    <td>NewStoreComponent</td>
+    <td>app-new-store</td>
+    <td>http:/localhost:4200/new-menu</td>
+    <td>Displays a form for adding a new menu</td>
+  </tr>
+  <tr>
+    <td>EditStoreComponent</td>
+    <td>app-edit-store</td>
+    <td>http:/localhost:4200/edit-menu/:id</td>
+    <td>Displays a form for editing an menu</td>
+  </tr>
+  <tr>
+    <td>DeleteStoreComponent</td>
+    <td>app-delete-store</td>
+    <td>http:/localhost:4200/delete-menu/:id</td>
+    <td>Responds to a button click to delete an menu</td>
+  </tr>
+  <tr>
+    <td>SearchStoreComponent</td>
+    <td>app-search-store</td>
+    <td>http:/localhost:4200/search-menu</td>
+    <td>Displays a form for searching for an menu by task description</td>
+  </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Invitee Components</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ShowInviteesComponent</td>
+      <td>app-show-invitees</td>
+      <td>http:/localhost:4200/menus</td>
+      <td>Displays the list of menus</td>
+    </tr>
+    <tr>
+      <td>NewInviteeComponent</td>
+      <td>app-new-invitee</td>
+      <td>http:/localhost:4200/new-menu</td>
+      <td>Displays a form for adding a new menu</td>
+    </tr>
+    <tr>
+      <td>EditInviteeComponent</td>
+      <td>app-edit-invitee</td>
+      <td>http:/localhost:4200/edit-menu/:id</td>
+      <td>Displays a form for editing an menu</td>
+    </tr>
+    <tr>
+      <td>DeleteInviteeComponent</td>
+      <td>app-delete-invitee</td>
+      <td>http:/localhost:4200/delete-menu/:id</td>
+      <td>Responds to a button click to delete an menu</td>
+    </tr>
+    <tr>
+      <td>SearchInviteeComponent</td>
+      <td>app-search-invitee</td>
+      <td>http:/localhost:4200/search-menu</td>
+      <td>Displays a form for searching for an menu by task description</td>
+    </tr>
+  </table>
 </details>
 
 ## Setup and Use
 
-#### Prerequisites
-* bootstrap 4.3.1
-* jquery 3.2.1
-* popper.js 1.14.7
-* babel-core 6.26.0
-* babel-loader 7.1.3
-* babel-preset-es2015 6.24.1
-* clean-webpack-plugin 0.1.18
-* css-loader 0.28.10
-* dotenv-webpack 1.7.0
-* eslint 4.18.2
-* eslint-loader 2.0.0
-* file-loader 3.0.1
-* html-webpack-plugin 3.0.6
-* jasmine 3.1.0
-* jasmine-core 2.99.1
-* karma 2.0.0
-* karma-chrome-launcher 2.2.0
-* karma-cli 1.0.1
-* karma-jasmine 1.1.1
-* karma-jasmine-html-reporter 0.2.2
-* karma-jquery 0.2.2
-* karma-sourcemap-loader 0.3.7
-* karma-webpack 2.0.13
-* style-loader 0.20.2
-* uglifyjs-webpack-plugin 1.2.2
-* url-loader 1.1.2
-* webpack 4.19.1
-* webpack-cli 2.0.9
-* webpack-dev-server 3.1.0
-
+#### Required Packages
+<details>
+<summary>Click Here for Required Packages</summary>
+<ul>
+<li>@angular/animations 5.2.0</li>
+<li>@angular/common 5.2.0</li>
+<li>@angular/compiler 5.2.0</li>
+<li>@angular/cli 1.6.5</li>
+<li>@angular/core 5.2.0</li>
+<li>@angular/forms 5.2.0</li>
+<li>@angular/http 5.2.0</li>
+<li>@angular/language-service 5.2.0</li>
+<li>@angular/platform-browser 5.2.0</li>
+<li>@angular/platform-browser-dynamic 5.2.0</li>
+<li>@angular/router 5.2.0</li>
+<li>angularfire2 4.0.0-rc.0</li>
+<li>bootstrap 4.3.1</li>
+<li>core-js 2.4.1</li>
+<li>firebase 3.9.0</li>
+<li>codelyzer 4.0.1</li>
+<li>jasmine-core 2.8.0</li>
+<li>jasmine-spec-reporter 4.2.1</li>
+<li>karma 2.0.0</li>
+<li>karma-chrome-launcher 2.2.0</li>
+<li>karma-coverage-istanbul-reporter 1.2.1</li>
+<li>karma-jasmine 1.1.0</li>
+<li>karma-jasmine-html-reporter 0.2.2</li>
+<li>protractor 5.1.2</li>
+<li>rxjs 5.5.6</li>
+<li>ts-node 4.1.0</li>
+<li>tslint 5.9.1</li>
+<li>@types/jasmine 2.8.3</li>
+<li>@types/jasminewd2 2.0.2</li>
+<li>@types/node 6.0.60</li>
+<li>typescript 2.5.3</li>
+<li>zone.js 0.8.19</li>
+</ul>
+</details>
 
 #### Download the Repository
 1. Clone [this repository](https://github.com/MarkStrickland562/AngularEventPlanner):
