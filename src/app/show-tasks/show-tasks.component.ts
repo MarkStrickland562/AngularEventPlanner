@@ -42,4 +42,8 @@ export class ShowTasksComponent implements OnInit {
   goToAddTaskPage() {
     this.router.navigate(['new-task']);
   }
+
+  goToSearchTaskPage() {
+    this.router.navigate(['search-task']);
+  }
 }

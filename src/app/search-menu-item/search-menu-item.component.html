@@ -1,3 +1,9 @@
-<p>
-  search-menu-item works!
-</p>
+<h3>Search for an Entree</h3>
+<div>
+  <label>Enter Part or All of the Entree Description:</label>
+  <input [(ngModel)]="searchString" placeholder="Enter search string here">
+  <ul>
+    <li *ngFor="let foundMenuItem of menuItemList | async | SearchMenuItemPipe : searchString">{{foundMenuItem.menuItemDescription}}
+    </li>
+  </ul>
+</div>

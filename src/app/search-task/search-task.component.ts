@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { Task } from '../models/task.model';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-search-task',
   templateUrl: './search-task.component.html',
-  styleUrls: ['./search-task.component.css']
+  styleUrls: ['./search-task.component.css'],
+  providers: [TaskService]
 })
+
 export class SearchTaskComponent implements OnInit {
 
-  constructor() { }
+  taskList: FirebaseListObservable<any[]>;
+  searchString: string;
+
+  constructor(private router: Router, private taskService: TaskService){}
 
   ngOnInit() {
+    this.taskList = this.taskService.getTasks();
   }
-
 }

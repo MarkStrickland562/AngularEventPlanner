@@ -42,4 +42,8 @@ export class ShowMenuItemsComponent implements OnInit {
   goToAddMenuItemPage() {
     this.router.navigate(['new-menu-item']);
   }
+
+  goToSearchMenuItemPage() {
+    this.router.navigate(['search-menu-item']);
+  }
 }

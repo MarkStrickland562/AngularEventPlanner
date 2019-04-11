@@ -1,3 +1,9 @@
-<p>
-  search-task works!
-</p>
+<h3>Search for a Task</h3>
+<div>
+  <label>Enter Part or All of the Task Description:</label>
+  <input [(ngModel)]="searchString" placeholder="Enter search string here">
+  <ul>
+    <li *ngFor="let foundTask of taskList | async | SearchTaskPipe : searchString">{{foundTask.taskDescription}}
+    </li>
+  </ul>
+</div>

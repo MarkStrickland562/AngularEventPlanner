@@ -42,4 +42,8 @@ export class ShowMenuItemIngredientsComponent implements OnInit {
   goToAddMenuItemIngredientPage() {
     this.router.navigate(['new-menu-item-ingredient']);
   }
+
+  goToSearchMenuItemIngredientPage() {
+    this.router.navigate(['search-menu-item-ingredient']);
+  }
 }

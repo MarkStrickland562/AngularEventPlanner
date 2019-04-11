@@ -42,4 +42,8 @@ export class ShowEventsComponent implements OnInit {
   goToAddEventPage() {
     this.router.navigate(['new-event']);
   }
+
+  goToSearchEventPage() {
+    this.router.navigate(['search-event']);
+  }
 }

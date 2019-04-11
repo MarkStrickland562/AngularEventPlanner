@@ -1,3 +1,9 @@
-<p>
-  search-store works!
-</p>
+<h3>Search for a Store</h3>
+<div>
+  <label>Enter Part or All of the Store Name:</label>
+  <input [(ngModel)]="searchString" placeholder="Enter search string here">
+  <ul>
+    <li *ngFor="let foundStore of storeList | async | SearchStorePipe : searchString">{{foundStore.storeName}}
+    </li>
+  </ul>
+</div>

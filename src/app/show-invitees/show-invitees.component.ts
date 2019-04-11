@@ -42,4 +42,8 @@ export class ShowInviteesComponent implements OnInit {
   goToAddInviteePage() {
     this.router.navigate(['new-invitee']);
   }
+
+  goToSearchInviteePage() {
+    this.router.navigate(['search-invitee']);
+  }
 }

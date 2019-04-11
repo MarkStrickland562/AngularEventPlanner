@@ -1,3 +1,9 @@
-<p>
-  search-menu works!
-</p>
+<h3>Search for an Menu</h3>
+<div>
+  <label>Enter Part or All of the Menu Theme:</label>
+  <input [(ngModel)]="searchString" placeholder="Enter search string here">
+  <ul>
+    <li *ngFor="let foundMenu of menuList | async | SearchMenuPipe : searchString">{{foundMenu.menuTheme}}
+    </li>
+  </ul>
+</div>

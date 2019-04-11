@@ -42,4 +42,8 @@ export class ShowStoresComponent implements OnInit {
   goToAddStorePage() {
     this.router.navigate(['new-store']);
   }
+
+  goToSearchStorePage() {
+    this.router.navigate(['search-store']);
+  }
 }
