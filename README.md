@@ -248,8 +248,13 @@ $ firebase deploy
 Run the Application:
 <br><br>
 $ firebase open
-
 </details>
+
+### Part Three (Future TBD)
+###### 1) Add CRUD support for referential integrity of the data.
+###### 2) Add user authentication.
+###### 3) Add route guards.
+###### 4) Add tests.
 
 ## Technical Architecture
 
@@ -723,8 +728,6 @@ $ firebase open
 1. Clone [this repository](https://github.com/MarkStrickland562/AngularEventPlanner):
 
        $ git clone https://github.com/MarkStrickland562/AngularEventPlanner.git
-
-#### Setup Firebase Key
 
 #### Install, build and run the application
 1. Navigate to the application root directory:

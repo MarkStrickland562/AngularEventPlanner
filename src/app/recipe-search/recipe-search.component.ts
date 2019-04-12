@@ -15,6 +15,9 @@ export class RecipeSearchComponent {
   constructor(private router: Router, private recipeSearchService: RecipeSearchService) { }
 
   searchRecipes(searchString: string, searchCount: number) {
+    if (!searchCount) {
+      searchCount = 10;
+    }
     this.recipes = null;
     this.recipeSearchService.getRecipes(searchString, searchCount).subscribe(response => {
       this.recipes = response.json();

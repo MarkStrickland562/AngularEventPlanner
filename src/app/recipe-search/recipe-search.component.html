@@ -12,6 +12,7 @@
         <br>
         <label>Enter the Number of Recipes to Display:</label>
         <input type="number" #searchCount>
+        <p>(default is 10)</p>
         <br>
         <button class="button" (click)="searchRecipes(searchString.value, searchCount.value)">Get Recipes</button>
       </div>
