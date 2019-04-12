@@ -1,9 +1,19 @@
-<h3>Search for an Ingredient</h3>
-<div>
-  <label>Enter Part or All of the Ingredient Description:</label>
-  <input [(ngModel)]="searchString" placeholder="Enter search string here">
-  <ul>
-    <li *ngFor="let foundMenuItemIngredient of menuItemIngredientList | async | SearchMenuItemIngredientPipe : searchString">{{foundMenuItemIngredient.ingredientDescription}}
-    </li>
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">SEARCH FOR FOODS</h1>
+        <label>Enter Part or All of the Food Description:</label>
+        <input [(ngModel)]="searchString">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItemIngredient of menuItemIngredientList | async | SearchMenuItemIngredientPipe : searchString">Description: {{foundMenuItemIngredient.ingredientDescription}}<br><br><button class="button" (click)="goToEditMenuItemIngredientPage(currentMenuItemIngredient)">Update</button>  <button class="button" (click)="goToDeleteMenuItemIngredientPage(currentMenuItemIngredient)">Delete</button></li>
+        </ul>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

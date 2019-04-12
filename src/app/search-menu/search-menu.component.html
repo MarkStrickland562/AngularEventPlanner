@@ -7,3 +7,23 @@
     </li>
   </ul>
 </div>
+
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">SEARCH FOR MENUS</h1>
+        <label>Enter Part or All of the Menu Theme:</label>
+        <input [(ngModel)]="searchString">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenu of menuList | async | SearchMenuPipe : searchString">Theme: {{foundMenu.menuTheme}}<br><br><button class="button" (click)="goToEditMenuPage(currentMenu)">Update</button>  <button class="button" (click)="goToDeleteMenuPage(currentMenu)">Delete</button></li>
+        </ul>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

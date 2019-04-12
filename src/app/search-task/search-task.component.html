@@ -1,9 +1,19 @@
-<h3>Search for a Task</h3>
-<div>
-  <label>Enter Part or All of the Task Description:</label>
-  <input [(ngModel)]="searchString" placeholder="Enter search string here">
-  <ul>
-    <li *ngFor="let foundTask of taskList | async | SearchTaskPipe : searchString">{{foundTask.taskDescription}}
-    </li>
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">SEARCH FOR TASKS</h1>
+        <label>Enter Part or All of the Task Description:</label>
+        <input [(ngModel)]="searchString">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let foundTask of taskList | async | SearchTaskPipe : searchString">Description: {{foundTask.taskDescription}}<br>Start Date/Time: {{foundTask.taskPlannedStartDateTime}}<br><br><button class="button" (click)="goToEditTaskPage(currentTask)">Update</button><button class="button" (click)="goToDeleteTaskPage(currentTask)">Delete</button></li>
+        </ul>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

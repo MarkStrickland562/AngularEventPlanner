@@ -1,9 +1,19 @@
-<h3>Search for an Entree</h3>
-<div>
-  <label>Enter Part or All of the Entree Description:</label>
-  <input [(ngModel)]="searchString" placeholder="Enter search string here">
-  <ul>
-    <li *ngFor="let foundMenuItem of menuItemList | async | SearchMenuItemPipe : searchString">{{foundMenuItem.menuItemDescription}}
-    </li>
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">SEARCH FOR DISHES</h1>
+        <label>Enter Part or All of the Dish Description:</label>
+        <input [(ngModel)]="searchString">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItem of menuItemList | async | SearchMenuItemPipe : searchString">Description: {{foundMenuItem.menuItemDescription}}<br><br><button class="button" (click)="goToEditMenuItemPage(currentMenuItem)">Update</button>  <button class="button" (click)="goToDeleteMenuItemPage(currentMenuItem)">Delete</button></li>
+        </ul>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>
