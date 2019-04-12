@@ -5,7 +5,7 @@ body {
   background: url("../../assets/img/photobackground1.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: beige;
   height: 100vh;
 }
 
@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  color: red;
+  color: green;
   padding-top: 10%;
   position: relative;
   left: 0;
@@ -32,14 +32,14 @@ button {
   background-color: white;
   color: black;
   width: 200px;
-  border: 3px solid black;
+  border: 3px solid darkgreen;
   border-radius: 15px;
   padding: 25px;
   margin: 25px;
 }
 
 a {
-  color: darkblue;
+  color: darkgreen;
   font-weight: bold;
   font-size: 20px;
 }

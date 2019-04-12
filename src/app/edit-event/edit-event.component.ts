@@ -39,7 +39,11 @@ export class EditEventComponent implements OnInit {
   }
 
   updateEvent(eventToUpdate) {
-    this.eventService.updateEvent(eventToUpdate);
-    this.goToShowEventPage();
+    if (eventToUpdate.eventName != "" && Date.parse(eventToUpdate.eventDate.toString()) != 0 && eventToUpdate.eventLocation != "") {
+      this.eventService.updateEvent(eventToUpdate);
+      this.goToShowEventPage();
+    } else {
+      alert('All fields are required!');
+    }
   }
 }

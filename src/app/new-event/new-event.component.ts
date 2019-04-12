@@ -28,8 +28,12 @@ export class NewEventComponent implements OnInit {
   }
 
   addEvent(eventName: string, eventDate: Date = new Date(), eventLocation: string, menusId: number) {
-    let newEvent: Event = new Event(eventName, eventDate, eventLocation, menusId);
-    this.eventService.addEvent(newEvent);
-    this.goToShowEventPage();
+    if (eventName != null && Date.parse(eventDate.toString()) != 0 && eventLocation != null) {
+      let newEvent: Event = new Event(eventName, eventDate, eventLocation, menusId);
+      this.eventService.addEvent(newEvent);
+      this.goToShowEventPage();
+    } else {
+      alert('All fields are required!');
+    }
   }
 }
