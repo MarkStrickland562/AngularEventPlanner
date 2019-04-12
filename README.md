@@ -18,6 +18,11 @@ Much of the styling has been kept from the C# project and credit for the styling
 The application can be accessed through this URL: https://angulareventplanner-386c7.firebaseapp.com
 
 ## Technical Features
+* Angular 5
+* Typescript
+* Bootstrap
+* jQuery
+* Numerous external styling resources
 * 7 model classes
 * 45 child components
 * 7 pipes
