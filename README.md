@@ -17,7 +17,7 @@ Much of the styling has been kept from the C# project and credit for the styling
 
 ## Known Bugs
 
-* No known bugs.
+No known bugs.
 
 ## Project Plan
 
@@ -61,84 +61,55 @@ Create and populate the following scripts for the model classes:
   <tr>
     <td>Event</td>
     <td>src/models/event.model.ts</td>
-    <td>export class Event {<br>constructor (public eventId: number,<br>public eventName: string<br>public eventDate: Date = new Date(),<br>public eventLocation: string,<br>
+    <td>export class Event {<br>constructor (public eventName: string<br>public eventDate: Date = new Date(),<br>public eventLocation: string,<br>
              public menusId: number) {}<br>}</td>
   </tr>    
   <tr>
     <td>Menu</td>
     <td>src/models/menu.model.ts</td>
-    <td>export class Menu {<br>constructor (menuId: number,<br>menuTheme: string){}<br>}</td>
+    <td>export class Menu {<br>constructor (public menuTheme: string){}<br>}</td>
   </tr>    
   <tr>
     <td>MenuItem</td>
     <td>src/models/menuItem.model.ts</td>
-    <td>export class MenuItem {<br>constructor(public menuItemId: number,<br>public menuItemDescription: string) {}<br>}</td>
+    <td>export class MenuItem {<br>constructor(number,<br>public menuItemDescription: string) {}<br>}</td>
   </tr>
   <tr>
     <td>MenuItemIngredient</td>
     <td>src/models/menuItemIngredient.model.ts</td>
-    <td>export class MenuItemIngredient {<br>constructor(public menuItemIngredientId: number,<br>public ingredientDescription: string,<br>public menuItemsId: number,<br>public storeId: number) {}<br>}</td>
+    <td>export class MenuItemIngredient {<br>constructor(public ingredientDescription: string,<br>public menuItemsId: number,<br>public storeId: number) {}<br>}</td>
   </tr>
   <tr>
     <td>Task</td>
     <td>src/models/task.model.ts</td>
-    <td>export class Task {<br>constructor(public taskId: number,<br>public taskDescription: string,<br>public taskPlannedStartDateTime: Date = new Date()) {}<br>}</td>
+    <td>export class Task {<br>constructor(public taskDescription: string,<br>public taskPlannedStartDateTime: Date = new Date()) {}<br>}</td>
   </tr>
   <tr>
     <td>Invitee</td>
     <td>src/models/invitee.model.ts</td>
-    <td>export class Invitee {<br>constructor(public inviteeId: number,<br>
+    <td>export class Invitee {<br>constructor(number,<br>
               public inviteeName: string,<br>public inviteeEmailAddress: string) {}<br>}</td>
   </tr>
 </table>
 </details>
 
-###### 4) Create scripts to add mock data.
-<details>
-<summary>Click Here for Details</summary>
-<table>
-  <tr>
-    <th>Script Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/event-data.ts</td>
-    <td>Data for the Event class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/menu-data.ts</td>
-    <td>Data for the Menu class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/menuItem-data.ts</td>
-    <td>Data for the MenuItem class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/menuItemIngredient-data.ts</td>
-    <td>Data for the MenuItemIngredient class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/task-data.ts</td>
-    <td>Data for the Task class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/store-data.ts</td>
-    <td>Data for the Store class</td>
-  </tr>
-  <tr>
-    <td>src/app/mock-data/invitee-data.ts</td>
-    <td>Data for the Invitee class</td>
-  </tr>
-</table>
-</details>
+###### 4) Create a JSON file of data to load into the Firebase database (app/mock-data/all-data.json).
 
 ###### 5) Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
 <summary>Click Here for Details</summary>
-1) Create the Welcone,, About and Main child components by executing the following command at the bash prompt:
-  $ ng generate component welcome
-  $ ng generate component main
-  $ ng generate component about
+<table>
+  <tr>
+    <td>Create the Welcome, About and Main child components</td>
+    <td>
+$ ng generate component welcome
+
+$ ng generate component main
+
+$ ng generate component about
+    </td>
+  <tr>
+</table>
 2) Create the Event child components by executing the following commmands at the bash prompt:
   $ ng generate component show-events
   $ ng generate component new-event
@@ -181,6 +152,14 @@ Create and populate the following scripts for the model classes:
     $ ng generate component edit-invitee
     $ ng generate component delete-invitee
     $ ng generate component search-invitee
+9) Create the app-header, app-script-sidebar, app-sidenav and app-top-right-nav child components by executing the following commands at the bash prompt:
+  $ ng generate component app-header
+  $ ng generate component app-script-sidebar
+  $ ng generate component app-sidenav
+  $ ng generate component app-top-right-nav
+
+10) Create the Recipe Search child component by executing the following command at the bash prompt:
+    $ ng generate component recipe-search
 </details>
 
 ###### 6) Develop views for showing data for all model classes.
