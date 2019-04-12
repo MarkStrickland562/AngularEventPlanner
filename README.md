@@ -106,86 +106,86 @@ Create and populate the following scripts for the model classes:
 <tr>
 <td>Welcome, About and Main</td>
 <td>
-$ ng generate component welcome
-$ ng generate component main
+$ ng generate component welcome<br>
+$ ng generate component main<br>
 $ ng generate component about
 </td>
 </tr>
 <tr>
 <td>Event</td>
 <td>
-$ ng generate component show-events
-$ ng generate component new-event
-$ ng generate component edit-event
-$ ng generate component delete-event
+$ ng generate component show-events<br>
+$ ng generate component new-event<br>
+$ ng generate component edit-event<br>
+$ ng generate component delete-event<br>
 $ ng generate component search-event
 </td>
 <tr>
 <td>Menu</td>
 <td>
-$ ng generate component show-menus
-$ ng generate component new-menu
-$ ng generate component edit-menu
-$ ng generate component delete-menu
+$ ng generate component show-menus<br>
+$ ng generate component new-menu<br>
+$ ng generate component edit-menu<br>
+$ ng generate component delete-menu<br>
 $ ng generate component search-menu
 </td>
 </tr>
 <tr>
 <td>Task</td>
 <td>
-$ ng generate component show-tasks
-$ ng generate component new-task
-$ ng generate component edit-task
-$ ng generate component delete-task
+$ ng generate component show-tasks<br>
+$ ng generate component new-task<br>
+$ ng generate component edit-task<br>
+$ ng generate component delete-task<br>
 $ ng generate component search-task
 </td>
 </tr>
 <tr>
 <td>MenuItem</td>
 <td>
-$ ng generate component show-menu-items
-$ ng generate component new-menu-item
-$ ng generate component edit-menu-item
-$ ng generate component delete-menu-item
+$ ng generate component show-menu-items<br>
+$ ng generate component new-menu-item<br>
+$ ng generate component edit-menu-item<br>
+$ ng generate component delete-menu-item<br>
 $ ng generate component search-menu-item
 </td>
 </tr>
 <tr>
 <td>MenuItemIngredient</td>
 <td>
-$ ng generate component show-menu-item-ingredients
-$ ng generate component new-menu-item-ingredient
-$ ng generate component edit-menu-item-ingredient
-$ ng generate component delete-menu-item-ingredient
+$ ng generate component show-menu-item-ingredients<br>
+$ ng generate component new-menu-item-ingredient<br>
+$ ng generate component edit-menu-item-ingredient<br>
+$ ng generate component delete-menu-item-ingredient<br>
 $ ng generate component search-menu-item-ingredient
 </td>
 </tr>
 <tr>
 <td>Store</td>
 <td>
-$ ng generate component show-stores
-$ ng generate component new-store
-$ ng generate component edit-store
-$ ng generate component delete-store
+$ ng generate component show-stores<br>
+$ ng generate component new-store<br>
+$ ng generate component edit-store<br>
+$ ng generate component delete-store<br>
 $ ng generate component search-store
 </td>
 </tr>
 <tr>
 <td>Invitee</td>
 <td>
-$ ng generate component show-invitees
-$ ng generate component new-invitee
-$ ng generate component edit-invitee
-$ ng generate component delete-invitee
+$ ng generate component show-invitees<br>
+$ ng generate component new-invitee<br>
+$ ng generate component edit-invitee<br>
+$ ng generate component delete-invitee<br>
 $ ng generate component search-invitee
 </td>
 </tr>
 <tr>
 <td>Shared HTML Components</td>
 <td>
-$ ng generate component app-header
-$ ng generate component app-script-sidebar
-$ ng generate component app-sidenav
+$ ng generate component app-header<br>
+$ ng generate component app-script-sidebar<br>
+$ ng generate component app-sidenav<br>
 $ ng generate component app-top-right-nav
 </td>
 </tr>
@@ -300,6 +300,41 @@ $ ng generate component recipe-search
       <td>app-about</td>
       <td>http:/localhost:4200/about</td>
       <td>Displays the About page</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Shared HTML Components</th>
+    </tr>
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>AppHeaderComponent</td>
+      <td>app-app-header</td>
+      <td>N/A</td>
+      <td>Shared HEAD HTML</td>
+    </tr>
+    <tr>
+      <td>AppScriptSidebarComponent</td>
+      <td>app-app-script-sidebar</td>
+      <td>N/A</td>
+      <td>Shared jQuery</td>
+    </tr>
+    <tr>
+      <td>AppSidenavComponent</td>
+      <td>app-app-sidenav</td>
+      <td>N/A</td>
+      <td>Shared Navigation Sidebar HTML</td>
+    </tr>
+    <tr>
+      <td>AppTopRightNavComponent</td>
+      <td>app-app-top-right-nav</td>
+      <td>N/A</td>
+      <td>Shared About and Exit button HTML</td>
     </tr>
   </table>
   <table>
@@ -587,6 +622,23 @@ $ ng generate component recipe-search
       <td>app-search-invitee</td>
       <td>http:/localhost:4200/search-menu</td>
       <td>Displays a form for searching for an menu by task description</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Recipe Search Component</th>
+    </tr>  
+    <tr>
+      <th>Component</th>
+      <th>Selector</th>
+      <th>Route URL</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>RecipeSearchComponent</td>
+      <td>app-recipe-search</td>
+      <td>http:/localhost:4200/recipes</td>
+      <td>Displays a search page for recipes and displays the results</td>
     </tr>
   </table>
 </details>
