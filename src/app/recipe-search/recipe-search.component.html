@@ -12,8 +12,8 @@
         <button class="button" (click)="searchRecipes(searchString.value)">Get Recipes</button>
       </div>
       <div *ngIf="recipes">
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let recipe of recipes">Title: {{recipe.title}}</li>
+        <ul class="list-group list-group-vertical">
+          <li class="list-group-item list-group-item-success" *ngFor="let recipe of recipes.hits">Title: {{recipe.recipe.label}}</li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

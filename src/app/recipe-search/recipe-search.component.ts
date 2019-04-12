@@ -17,6 +17,7 @@ export class RecipeSearchComponent {
     this.recipes = null;
     this.recipeSearchService.getRecipes(searchString).subscribe(response => {
       this.recipes = response.json();
+      console.log(this.recipes);
     });
   }
 }
