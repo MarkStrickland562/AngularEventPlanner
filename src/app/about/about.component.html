@@ -5,63 +5,27 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- Sidebar Holder -->
-      <nav id="sidebar">
-        <!-- <button type="button" id="closeNav">
-          <svg class="fas fa-times"></svg>
-        </button> -->
-        <ul class="list-unstyled components">
-          <li class="active">
-            <a routerLink="/events">EVENTS<br><i class="fas fa-plus"></i></a>
-          </li>
-          <li>
-            <a routerLink="/menus">MENUS<br><i class="fas fa-book-open"></i></a>
-          </li>
-          <li>
-            <a routerLink="/menu-items">DISHES<br><i class="fas fa-utensils"></i></a>
-          </li>
-          <li>
-            <a routerLink="/menu-item-ingredients">FOODS<br><i class="fas fa-seedling"></i></a>
-          </li>
-          <li>
-            <a routerLink="/stores">STORES<br><i class="fas fa-shopping-cart"></i></a>
-          </li>
-          <li>
-            <a routerLink="/tasks">TASKS<br><i class="fas fa-check"></i></a>
-          </li>
-          <li>
-            <a routerLink="/invitees">INVITES<br><i class="fas fa-at"></i></a>
-          </li>
-          </ul>
-      </nav>
-      <div id="page-content" class="container-fluid">
-        <div align="right" class="button-main">
-          <a href="/main">RETURN</a>
-          <br>
-          <a href="/">EXIT</a>
-        </div>
-        <div>
-          <h1 id="pageTitle">About this Application</h1>
-          <p id="ptext">This project is a re-development of a C#-based team project from the Epicodus C# class called "eHappenings", an Event Planning tool. The C# code has been converted to javascript and Angular
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">About this Application</h1>
+        <h3 class="h3">Overview</h3>
+        <p class="ptext">This project is a re-development of a C#-based team project from the Epicodus C# class called "eHappenings", an Event Planning tool. The C# code has been converted to javascript and Angular
   and the C# Model/View/Controller structure has been converted to the Angular Model/View/Component structure.
   Much of the styling has been kept from the C# project and credit for the styling goes to Clara Munro and Micaela Jawor.</p>
+        <h3 class="h3">Technical Features</h3>
+        <div class="ptext">
+          <ul>
+            <li>7 model classes</li>
+            <li>45 child components</li>
+            <li>7 pipes</li>
+            <li>39 routes</li>
+            <li>8 services</li>
+            <li>1 API</li>
+          </ul>
         </div>
       </div>
-      <script>
-        $(document).ready(function () {
-          $('#sidebarCollapse').on('click', function () {
-          // open or close navbar
-            $('#sidebar').toggleClass('active');
-            // close dropdowns
-            $('#content').toggleClass('active');
-          });
-
-          $('#closeNav').on('click', function () {
-            $('#sidebar').toggleClass('active');
-            $('#content').toggleClass('active');
-          });
-        });
-      </script>
     </div>
+    <app-app-script-sidebar></app-app-script-sidebar>
   </body>
 </html>

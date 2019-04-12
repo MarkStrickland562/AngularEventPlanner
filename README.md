@@ -15,6 +15,16 @@ This project is a re-development of a C#-based team project from the Epicodus C#
 and the C# Model/View/Controller structure has been converted to the Angular Model/View/Component structure.
 Much of the styling has been kept from the C# project and credit for the styling goes to Clara Munro and Micaela Jawor. Credit for the format of this README largely goes to Shawn Lunsford.
 
+The application can be accessed through this URL: https://angulareventplanner-386c7.firebaseapp.com
+
+## Technical Features
+* 7 model classes
+* 45 child components
+* 7 pipes
+* 39 routes
+* 8 services
+* 1 API
+
 ## Known Bugs
 
 No known bugs.
@@ -93,7 +103,7 @@ Create and populate the following scripts for the model classes:
 </table>
 </details>
 
-###### 4) Create a JSON file of data to load into the Firebase database (app/mock-data/all-data.json).
+###### 4) Develop mock data for each class.
 
 ###### 5) Create component templates for showing, adding, editing, deleting and searching for model-related objects.
 <details>
@@ -215,6 +225,31 @@ $ ng generate component recipe-search
 ###### 9) Move the shared HTML into separate components.
 ###### 10) Add an API service for supporting recipe search.
 ###### 11) Add the Recipe Search component.
+###### 12) Deploy to firebase
+<details>
+  <summary>Click Here for Deployment Steps</summary>
+<br>
+Install Required Packages:
+<br><br>
+$ npm install -g firebase-tools
+<br><br>
+Setup Firebase:
+<br><br>
+  $ firebase login
+<br>
+$ firebase init
+<br><br>
+Deploy to Firebase:
+<br><br>
+$ ng build --env=prod
+<br>
+$ firebase deploy
+<br><br>
+Run the Application:
+<br><br>
+$ firebase open
+
+</details>
 
 ## Technical Architecture
 
