@@ -1,8 +1,21 @@
-<h3>Delete Guest</h3>
-<label>Confirm Delete [Y/N]:</label>
-<select (change)="onSelect($event)">
-  <option value="undefined" disabled></option>
-  <option value=false>No</option>
-  <option value=true>Yes</option>
-</select>
-<button (click)="submitForm('Y')">Confirm</button>
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">DELETE INVITE</h1>
+        <label>Confirm Delete:</label>
+        <select (change)="onSelect($event)">
+          <option value="undefined" disabled></option>
+          <option value=false>No</option>
+          <option value=true>Yes</option>
+        </select>
+        <button class="button" (click)="submitForm()">Confirm</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>
