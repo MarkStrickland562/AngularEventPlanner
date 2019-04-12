@@ -59,6 +59,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppSidenavComponent } from './app-sidenav/app-sidenav.component';
 import { AppTopRightNavComponent } from './app-top-right-nav/app-top-right-nav.component';
 import { AppScriptSidebarComponent } from './app-script-sidebar/app-script-sidebar.component';
+import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -118,14 +119,16 @@ export const firebaseConfig = {
     AppHeaderComponent,
     AppSidenavComponent,
     AppTopRightNavComponent,
-    AppScriptSidebarComponent
+    AppScriptSidebarComponent,
+    RecipeSearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
