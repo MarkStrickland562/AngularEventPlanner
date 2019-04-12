@@ -99,67 +99,103 @@ Create and populate the following scripts for the model classes:
 <details>
 <summary>Click Here for Details</summary>
 <table>
-  <tr>
-    <td>Create the Welcome, About and Main child components</td>
-    <td>
+<tr>
+<th>Component Area</th>
+<th>Commands</th>
+</tr>
+<tr>
+<td>Welcome, About and Main</td>
+<td>
 $ ng generate component welcome
-
 $ ng generate component main
-
 $ ng generate component about
-    </td>
-  <tr>
+</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>
+$ ng generate component show-events
+$ ng generate component new-event
+$ ng generate component edit-event
+$ ng generate component delete-event
+$ ng generate component search-event
+</td>
+<tr>
+<td>Menu</td>
+<td>
+$ ng generate component show-menus
+$ ng generate component new-menu
+$ ng generate component edit-menu
+$ ng generate component delete-menu
+$ ng generate component search-menu
+</td>
+</tr>
+<tr>
+<td>Task</td>
+<td>
+$ ng generate component show-tasks
+$ ng generate component new-task
+$ ng generate component edit-task
+$ ng generate component delete-task
+$ ng generate component search-task
+</td>
+</tr>
+<tr>
+<td>MenuItem</td>
+<td>
+$ ng generate component show-menu-items
+$ ng generate component new-menu-item
+$ ng generate component edit-menu-item
+$ ng generate component delete-menu-item
+$ ng generate component search-menu-item
+</td>
+</tr>
+<tr>
+<td>MenuItemIngredient</td>
+<td>
+$ ng generate component show-menu-item-ingredients
+$ ng generate component new-menu-item-ingredient
+$ ng generate component edit-menu-item-ingredient
+$ ng generate component delete-menu-item-ingredient
+$ ng generate component search-menu-item-ingredient
+</td>
+</tr>
+<tr>
+<td>Store</td>
+<td>
+$ ng generate component show-stores
+$ ng generate component new-store
+$ ng generate component edit-store
+$ ng generate component delete-store
+$ ng generate component search-store
+</td>
+</tr>
+<tr>
+<td>Invitee</td>
+<td>
+$ ng generate component show-invitees
+$ ng generate component new-invitee
+$ ng generate component edit-invitee
+$ ng generate component delete-invitee
+$ ng generate component search-invitee
+</td>
+</tr>
+<tr>
+<td>Shared HTML Components</td>
+<td>
+$ ng generate component app-header
+$ ng generate component app-script-sidebar
+$ ng generate component app-sidenav
+$ ng generate component app-top-right-nav
+</td>
+</tr>
+<tr>
+<td>Recipe Search</td>
+<td>
+$ ng generate component recipe-search
+</td>
+</tr>
 </table>
-2) Create the Event child components by executing the following commmands at the bash prompt:
-  $ ng generate component show-events
-  $ ng generate component new-event
-  $ ng generate component edit-event
-  $ ng generate component delete-event
-  $ ng generate component search-event
-3) Create the Menu child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-menus
-    $ ng generate component new-menu
-    $ ng generate component edit-menu
-    $ ng generate component delete-menu
-    $ ng generate component search-menu
-4) Create the Task child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-tasks
-    $ ng generate component new-task
-    $ ng generate component edit-task
-    $ ng generate component delete-task
-    $ ng generate component search-task
-5) Create the MenuItem child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-menu-items
-    $ ng generate component new-menu-item
-    $ ng generate component edit-menu-item
-    $ ng generate component delete-menu-item
-    $ ng generate component search-menu-item
-6) Create the MenuItemIngredient child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-menu-item-ingredients
-    $ ng generate component new-menu-item-ingredient
-    $ ng generate component edit-menu-item-ingredient
-    $ ng generate component delete-menu-item-ingredient
-    $ ng generate component search-menu-item-ingredient
-7) Create the Store child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-stores
-    $ ng generate component new-store
-    $ ng generate component edit-store
-    $ ng generate component delete-store
-    $ ng generate component search-store
-8) Create the Invitee child components by executing the following commmands at the bash prompt:
-    $ ng generate component show-invitees
-    $ ng generate component new-invitee
-    $ ng generate component edit-invitee
-    $ ng generate component delete-invitee
-    $ ng generate component search-invitee
-9) Create the app-header, app-script-sidebar, app-sidenav and app-top-right-nav child components by executing the following commands at the bash prompt:
-  $ ng generate component app-header
-  $ ng generate component app-script-sidebar
-  $ ng generate component app-sidenav
-  $ ng generate component app-top-right-nav
-
-10) Create the Recipe Search child component by executing the following command at the bash prompt:
-    $ ng generate component recipe-search
 </details>
 
 ###### 6) Develop views for showing data for all model classes.
@@ -176,6 +212,9 @@ $ ng generate component about
 ###### 6) Add an API call.
 ###### 7) Add user authentication
 ###### 8) Incorporate the styling from the C# project.
+###### 9) Move the shared HTML into separate components.
+###### 10) Add an API service for supporting recipe search.
+###### 11) Add the Recipe Search component.
 
 ## Technical Architecture
 
