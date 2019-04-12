@@ -39,7 +39,10 @@ export class EditMenuComponent implements OnInit {
   }
 
   updateMenu(menuToUpdate) {
-    this.menuService.updateMenu(menuToUpdate);
-    this.goToShowMenuPage();
+    if (menuToUpdate.menuTheme != "") {
+      this.menuService.updateMenu(menuToUpdate);
+      this.goToShowMenuPage();
+  } else {
+    alert('All fields are required!');    
   }
 }

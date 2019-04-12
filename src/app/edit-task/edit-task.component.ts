@@ -39,7 +39,10 @@ export class EditTaskComponent implements OnInit {
   }
 
   updateTask(taskToUpdate) {
-    this.taskService.updateTask(taskToUpdate);
-    this.goToShowTaskPage();
+    if (taskToUpdate.description != "") {
+      this.taskService.updateTask(taskToUpdate);
+      this.goToShowTaskPage();
+  } else {
+    alert('All fields are required!');    
   }
 }

@@ -39,7 +39,10 @@ export class EditStoreComponent implements OnInit {
   }
 
   updateStore(storeToUpdate) {
-    this.storeService.updateStore(storeToUpdate);
-    this.goToShowStorePage();
+    if (storeToUpdate.storeName != "") {
+      this.storeService.updateStore(storeToUpdate);
+      this.goToShowStorePage();
+  } else {
+    alert('All fields are required!');
   }
 }

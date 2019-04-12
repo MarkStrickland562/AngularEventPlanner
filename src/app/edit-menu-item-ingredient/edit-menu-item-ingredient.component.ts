@@ -39,7 +39,10 @@ export class EditMenuItemIngredientComponent implements OnInit {
   }
 
   updateMenuItemIngredient(menuItemIngredientToUpdate) {
-    this.menuItemIngredientService.updateMenuItemIngredient(menuItemIngredientToUpdate);
-    this.goToShowMenuItemIngredientPage();
+    if (menuItemIngredientToUpdate.description != "") {
+      this.menuItemIngredientService.updateMenuItemIngredient(menuItemIngredientToUpdate);
+      this.goToShowMenuItemIngredientPage();
+  } else {
+    alert('All fields are required!');    
   }
 }

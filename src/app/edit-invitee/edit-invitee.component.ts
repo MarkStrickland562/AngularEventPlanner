@@ -39,7 +39,10 @@ export class EditInviteeComponent implements OnInit {
   }
 
   updateInvitee(inviteeToUpdate) {
-    this.inviteeService.updateInvitee(inviteeToUpdate);
-    this.goToShowInviteePage();
+    if (inviteeToUpdate.inviteeName != "" && inviteeToUpdate.inviteeEmailAddress != "") {
+      this.inviteeService.updateInvitee(inviteeToUpdate);
+      this.goToShowInviteePage();
+  } else {
+    alert('All fields are required!');
   }
 }
