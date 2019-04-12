@@ -21,4 +21,12 @@ export class SearchTaskComponent implements OnInit {
   ngOnInit() {
     this.taskList = this.taskService.getTasks();
   }
+
+  goToEditTaskPage(clickedTask) {
+    this.router.navigate(['edit-task', clickedTask.$key]);
+  }
+
+  goToDeleteTaskPage(clickedTask) {
+    this.router.navigate(['delete-task', clickedTask.$key]);
+  }
 }

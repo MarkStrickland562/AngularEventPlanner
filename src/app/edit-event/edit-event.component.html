@@ -10,7 +10,7 @@
         <label>Event Name:</label>
         <input [ngModel]="eventToUpdate?.eventName" (ngModelChange)="eventToUpdate.eventName = $event" />
         <label>Event Date:</label>
-        <input [ngModel]="eventToUpdate?.eventDate" (ngModelChange)="eventToUpdate.eventDate = $event" />
+        <input type="datetime-local" [ngModel]="eventToUpdate?.eventDate" (ngModelChange)="eventToUpdate.eventDate = $event" />
         <label>Event Location:</label>
         <input [ngModel]="eventToUpdate?.eventLocation" (ngModelChange)="eventToUpdate.eventLocation = $event" />
         <button class="button" (click)="updateEvent(eventToUpdate)">Done</button>

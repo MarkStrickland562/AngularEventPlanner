@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Event Name:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundEvent of eventList | async | SearchEventPipe : searchString">Event: {{foundEvent.eventName}}<br>Date: {{foundEvent.eventDate}}<br>Location: {{foundEvent.eventLocation}}<br><br><button class="button" (click)="goToEditEventPage(currentEvent)">Update</button>  <button class="button" (click)="goToDeleteEventPage(currentEvent)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundEvent of eventList | async | SearchEventPipe : searchString">Event: {{foundEvent.eventName}}<br>Date: {{foundEvent.eventDate}}<br>Location: {{foundEvent.eventLocation}}<br><br><button class="button" (click)="goToEditEventPage(foundEvent)">Update</button>  <button class="button" (click)="goToDeleteEventPage(foundEvent)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

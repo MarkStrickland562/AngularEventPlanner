@@ -42,7 +42,8 @@ export class EditMenuItemIngredientComponent implements OnInit {
     if (menuItemIngredientToUpdate.description != "") {
       this.menuItemIngredientService.updateMenuItemIngredient(menuItemIngredientToUpdate);
       this.goToShowMenuItemIngredientPage();
-  } else {
-    alert('All fields are required!');    
+    } else {
+      alert('All fields are required!');
+    }
   }
 }

@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Store Name:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundStore of storeList | async | SearchStorePipe : searchString">Name: {{foundStore.storeName}}<br><br><button class="button" (click)="goToEditStorePage(currentStore)">Update</button><button class="button" (click)="goToDeleteStorePage(currentStore)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundStore of storeList | async | SearchStorePipe : searchString">Name: {{foundStore.storeName}}<br><br><button class="button" (click)="goToEditStorePage(foundStore)">Update</button><button class="button" (click)="goToDeleteStorePage(foundStore)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

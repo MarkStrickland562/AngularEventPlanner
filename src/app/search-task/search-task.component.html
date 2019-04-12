@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Task Description:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundTask of taskList | async | SearchTaskPipe : searchString">Description: {{foundTask.taskDescription}}<br>Start Date/Time: {{foundTask.taskPlannedStartDateTime}}<br><br><button class="button" (click)="goToEditTaskPage(currentTask)">Update</button><button class="button" (click)="goToDeleteTaskPage(currentTask)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundTask of taskList | async | SearchTaskPipe : searchString">Description: {{foundTask.taskDescription}}<br>Start Date/Time: {{foundTask.taskPlannedStartDateTime}}<br><br><button class="button" (click)="goToEditTaskPage(foundTask)">Update</button><button class="button" (click)="goToDeleteTaskPage(foundTask)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

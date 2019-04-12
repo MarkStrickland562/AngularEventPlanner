@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Food Description:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItemIngredient of menuItemIngredientList | async | SearchMenuItemIngredientPipe : searchString">Description: {{foundMenuItemIngredient.ingredientDescription}}<br><br><button class="button" (click)="goToEditMenuItemIngredientPage(currentMenuItemIngredient)">Update</button>  <button class="button" (click)="goToDeleteMenuItemIngredientPage(currentMenuItemIngredient)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItemIngredient of menuItemIngredientList | async | SearchMenuItemIngredientPipe : searchString">Description: {{foundMenuItemIngredient.ingredientDescription}}<br><br><button class="button" (click)="goToEditMenuItemIngredientPage(foundMenuItemIngredient)">Update</button>  <button class="button" (click)="goToDeleteMenuItemIngredientPage(foundMenuItemIngredient)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

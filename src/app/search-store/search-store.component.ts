@@ -21,4 +21,12 @@ export class SearchStoreComponent implements OnInit {
   ngOnInit() {
     this.storeList = this.storeService.getStores();
   }
+
+  goToEditStorePage(clickedStore) {
+    this.router.navigate(['edit-store', clickedStore.$key]);
+  }
+
+  goToDeleteStorePage(clickedStore) {
+    this.router.navigate(['delete-store', clickedStore.$key]);
+  }
 }

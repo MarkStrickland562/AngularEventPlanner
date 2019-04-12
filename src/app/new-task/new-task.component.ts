@@ -32,7 +32,8 @@ export class NewTaskComponent implements OnInit {
       let newTask: Task = new Task(taskDescription, taskPlannedStartDateTimeDate);
       this.taskService.addTask(newTask);
       this.goToShowTaskPage();
-  } else {
-    alert('All fields are required!');
+    } else {
+      alert('All fields are required!');
+    }
   }
 }

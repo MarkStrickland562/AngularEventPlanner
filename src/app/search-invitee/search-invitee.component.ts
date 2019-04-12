@@ -21,4 +21,12 @@ export class SearchInviteeComponent implements OnInit {
   ngOnInit() {
     this.inviteeList = this.inviteeService.getInvitees();
   }
+
+  goToEditInviteePage(clickedInvitee) {
+    this.router.navigate(['edit-invitee', clickedInvitee.$key]);
+  }
+
+  goToDeleteInviteePage(clickedInvitee) {
+    this.router.navigate(['delete-invitee', clickedInvitee.$key]);
+  }
 }

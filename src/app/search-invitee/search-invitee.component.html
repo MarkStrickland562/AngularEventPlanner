@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Invite's Name:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundInvitee of inviteeList | async | SearchInviteePipe : searchString">Name: {{foundInvitee.inviteeName}}<br>Email Address: {{foundInvitee.inviteeEmailAddress}}<br><br><button class="button" (click)="goToEditInviteePage(currentInvitee)">Update</button>  <button class="button" (click)="goToDeleteInviteeePage(currentInvitee)">Delete</button></li></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundInvitee of inviteeList | async | SearchInviteePipe : searchString">Name: {{foundInvitee.inviteeName}}<br>Email Address: {{foundInvitee.inviteeEmailAddress}}<br><br><button class="button" (click)="goToEditInviteePage(foundInvitee)">Update</button>  <button class="button" (click)="goToDeleteInviteeePage(foundInvitee)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

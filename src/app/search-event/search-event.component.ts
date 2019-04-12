@@ -21,4 +21,12 @@ export class SearchEventComponent implements OnInit {
   ngOnInit() {
     this.eventList = this.eventService.getEvents();
   }
+
+  goToEditEventPage(clickedEvent) {
+    this.router.navigate(['edit-event', clickedEvent.$key]);
+  }
+
+  goToDeleteEventPage(clickedEvent) {
+    this.router.navigate(['delete-event', clickedEvent.$key]);
+  }
 }

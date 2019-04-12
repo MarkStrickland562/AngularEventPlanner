@@ -28,8 +28,12 @@ export class NewMenuItemIngredientComponent implements OnInit {
   }
 
   addMenuItemIngredient(ingredientDescription: string, menuItemsId: number, storeId: number) {
-    let newMenuItemIngredient: MenuItemIngredient = new MenuItemIngredient(ingredientDescription, menuItemsId, storeId);
-    this.menuItemIngredientService.addMenuItemIngredient(newMenuItemIngredient);
-    this.goToShowMenuItemIngredientPage();
+    if (ingredientDescription != "") {
+      let newMenuItemIngredient: MenuItemIngredient = new MenuItemIngredient(ingredientDescription, menuItemsId, storeId);
+      this.menuItemIngredientService.addMenuItemIngredient(newMenuItemIngredient);
+      this.goToShowMenuItemIngredientPage();
+    } else {
+      alert('All fields are required!');
+    }
   }
 }

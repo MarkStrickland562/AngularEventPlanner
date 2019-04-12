@@ -28,11 +28,12 @@ export class NewMenuComponent implements OnInit {
   }
 
   addMenu(menuTheme: string) {
-    if (menuTheme != null) {
+    if (menuTheme != "") {
       let newMenu: Menu = new Menu(menuTheme);
       this.menuService.addMenu(newMenu);
       this.goToShowMenuPage();
-  } else {
-    alert('All fields are required!');
+    } else {
+      alert('All fields are required!');
+    }
   }
 }

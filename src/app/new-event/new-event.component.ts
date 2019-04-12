@@ -28,7 +28,7 @@ export class NewEventComponent implements OnInit {
   }
 
   addEvent(eventName: string, eventDate: Date = new Date(), eventLocation: string, menusId: number) {
-    if (eventName != null && Date.parse(eventDate.toString()) != 0 && eventLocation != null) {
+    if (eventName != "" && Date.parse(eventDate.toString()) != 0 && eventLocation != "") {
       let newEvent: Event = new Event(eventName, eventDate, eventLocation, menusId);
       this.eventService.addEvent(newEvent);
       this.goToShowEventPage();

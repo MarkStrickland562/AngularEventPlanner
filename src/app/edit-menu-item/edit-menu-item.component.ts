@@ -43,6 +43,7 @@ export class EditMenuItemComponent implements OnInit {
       this.menuItemService.updateMenuItem(menuItemToUpdate);
       this.goToShowMenuItemPage();
     } else {
-      alert('All fields are required!');      
+      alert('All fields are required!');
     }
+  }
 }

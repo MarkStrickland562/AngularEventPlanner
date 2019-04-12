@@ -28,11 +28,12 @@ export class NewStoreComponent implements OnInit {
   }
 
   addStore(storeName: string) {
-    if (storeName != null) {
+    if (storeName != "") {
       let newStore: Store = new Store(storeName);
       this.storeService.addStore(newStore);
       this.goToShowStorePage();
-  } else {
-      alert('All fields are required!');
+    } else {
+        alert('All fields are required!');
+    }
   }
 }

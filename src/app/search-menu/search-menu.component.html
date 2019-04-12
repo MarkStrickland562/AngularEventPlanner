@@ -20,7 +20,7 @@
         <label>Enter Part or All of the Menu Theme:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundMenu of menuList | async | SearchMenuPipe : searchString">Theme: {{foundMenu.menuTheme}}<br><br><button class="button" (click)="goToEditMenuPage(currentMenu)">Update</button>  <button class="button" (click)="goToDeleteMenuPage(currentMenu)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenu of menuList | async | SearchMenuPipe : searchString">Theme: {{foundMenu.menuTheme}}<br><br><button class="button" (click)="goToEditMenuPage(foundMenu)">Update</button>  <button class="button" (click)="goToDeleteMenuPage(foundMenu)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

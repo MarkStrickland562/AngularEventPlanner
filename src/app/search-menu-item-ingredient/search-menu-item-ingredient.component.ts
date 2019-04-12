@@ -21,4 +21,12 @@ export class SearchMenuItemIngredientComponent implements OnInit {
   ngOnInit() {
     this.menuItemIngredientList = this.menuItemIngredientService.getMenuItemIngredients();
   }
+
+  goToEditMenuItemIngredientPage(clickedMenuItemIngredient) {
+    this.router.navigate(['edit-menu-item-ingredient', clickedMenuItemIngredient.$key]);
+  }
+
+  goToDeleteMenuItemIngredientPage(clickedMenuItemIngredient) {
+    this.router.navigate(['delete-menu-item-ingredient', clickedMenuItemIngredient.$key]);
+  }
 }

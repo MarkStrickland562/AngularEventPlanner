@@ -10,7 +10,7 @@
         <label>Enter Part or All of the Dish Description:</label>
         <input [(ngModel)]="searchString">
         <ul class="list-group list-group-horizontal">
-          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItem of menuItemList | async | SearchMenuItemPipe : searchString">Description: {{foundMenuItem.menuItemDescription}}<br><br><button class="button" (click)="goToEditMenuItemPage(currentMenuItem)">Update</button>  <button class="button" (click)="goToDeleteMenuItemPage(currentMenuItem)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let foundMenuItem of menuItemList | async | SearchMenuItemPipe : searchString">Description: {{foundMenuItem.menuItemDescription}}<br><br><button class="button" (click)="goToEditMenuItemPage(foundMenuItem)">Update</button>  <button class="button" (click)="goToDeleteMenuItemPage(foundMenuItem)">Delete</button></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>
