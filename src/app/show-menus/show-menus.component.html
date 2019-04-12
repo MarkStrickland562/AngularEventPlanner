@@ -1,7 +1,25 @@
-<h3>Menu List</h3>
-<ul>
-  <li *ngFor="let currentMenu of menuList | async">{{currentMenu.menuTheme}}  <button (click)="goToEditMenuPage(currentMenu)">Update!</button>  <button (click)="goToDeleteMenuPage(currentMenu)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddMenuPage()">Add Menu</button>
-<button (click)="goToSearchMenuPage()">Search Menus</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">MENUS</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentMenu of menuList | async">Theme: {{currentMenu.menuTheme}}<br><button  class="button" (click)="goToEditMenuPage(currentMenu)">Update</button>  <button  class="button" (click)="goToDeleteMenuPage(currentMenu)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddMenuPage()">Add Menu</button>
+        <button class="button" (click)="goToSearchMenuPage()">Search Menus</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

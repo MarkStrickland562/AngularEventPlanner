@@ -1,7 +1,25 @@
-<h3>Entree List</h3>
-<ul>
-  <li *ngFor="let currentMenuItem of menuItemList | async">{{currentMenuItem.menuItemDescription}}  <button (click)="goToEditMenuItemPage(currentMenuItem)">Update!</button>  <button (click)="goToDeleteMenuItemPage(currentMenuItem)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddMenuItemPage()">Add Menu Item</button>
-<button (click)="goToSearchMenuItemPage()">Search Entrees</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">DISHES</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentMenuItem of menuItemList | async">Description: {{currentMenuItem.menuItemDescription}}<br><button class="button" (click)="goToEditMenuItemPage(currentMenuItem)">Update</button>  <button class="button" (click)="goToDeleteMenuItemPage(currentMenuItem)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddMenuItemPage()">Add Dish</button>
+        <button class="button" (click)="goToSearchEventPage()">Search Dishes</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

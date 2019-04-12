@@ -1,7 +1,25 @@
-<h3>Store List</h3>
-<ul>
-  <li *ngFor="let currentStore of storeList | async">{{currentStore.storeName}}  <button (click)="goToEditStorePage(currentStore)">Update!</button>  <button (click)="goToDeleteStorePage(currentStore)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddStorePage()">Add Store</button>
-<button (click)="goToSearchStorePage()">Search Stores</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">STORES</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentStore of storeList | async">Name: {{currentStore.storeName}}<br><button class="button" (click)="goToEditStorePage(currentStore)">Update</button>  <button class="button" (click)="goToDeleteStorePage(currentStore)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddStorePage()">Add Store</button>
+        <button class="button" (click)="goToSearchStorePage()">Search Stores</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

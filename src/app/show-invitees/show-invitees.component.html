@@ -1,7 +1,26 @@
-<h3>Invitee List</h3>
-<ul>
-  <li *ngFor="let currentInvitee of inviteeList | async">{{currentInvitee.inviteeName}}  {{currentInvitee.inviteeEmailAddress}} <button (click)="goToEditInviteePage(currentInvitee)">Update!</button>  <button (click)="goToDeleteInviteePage(currentInvitee)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddInviteePage()">Add Guest</button>
-<button (click)="goToSearchInviteePage()">Search Guests</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">INVITES</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentEvent of eventList | async">Event: {{currentEvent.eventName}}<br>Date: {{currentEvent.eventDate}}<br>Location: {{currentEvent.eventLocation}}<br><br><button class="button" (click)="goToEditEventPage(currentEvent)">Update</button>  <button class="button" (click)="goToDeleteEventPage(currentEvent)">Delete</button></li>
+          <li class="list-group-item list-group-item-success" *ngFor="let currentInvitee of inviteeList | async">Name: {{currentInvitee.inviteeName}}<br>Email Address: {{currentInvitee.inviteeEmailAddress}} <button class="button" (click)="goToEditInviteePage(currentInvitee)">Update</button>  <button class="button" (click)="goToDeleteInviteePage(currentInvitee)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddInviteePage()">Add Invite</button>
+        <button class="button" (click)="goToSearchInviteePage()">Search Invites</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

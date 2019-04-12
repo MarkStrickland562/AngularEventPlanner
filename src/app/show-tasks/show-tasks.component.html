@@ -1,7 +1,25 @@
-<h3>Task List</h3>
-<ul>
-  <li *ngFor="let currentTask of taskList | async">{{currentTask.taskDescription}}  {{currentTask.taskPlannedStartDateTime}}  <button (click)="goToEditTaskPage(currentTask)">Update!</button>  <button (click)="goToDeleteTaskPage(currentTask)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddTaskPage()">Add Task</button>
-<button (click)="goToSearchTaskPage()">Search Tasks</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">TASKS</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentTask of taskList | async">Description: {{currentTask.taskDescription}}<br>Start Date/Time: {{currentTask.taskPlannedStartDateTime}}<br><button class="button" (click)="goToEditTaskPage(currentTask)">Update</button>  <button class="button" (click)="goToDeleteTaskPage(currentTask)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddTaskPage()">Add Task</button>
+        <button class="button" (click)="goToSearchTaskPage()">Search Tasks</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

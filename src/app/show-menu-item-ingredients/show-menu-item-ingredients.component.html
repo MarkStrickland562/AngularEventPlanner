@@ -1,7 +1,26 @@
-<h3>Menu Item Ingredient List</h3>
-<ul>
-  <li *ngFor="let currentMenuItemIngredient of menuItemIngredientList | async">{{currentMenuItemIngredient.ingredientDescription}} <button (click)="goToEditMenuItemIngredientPage(currentMenuItemIngredient)">Update!</button>  <button (click)="goToDeleteMenuItemIngredientPage(currentMenuItemIngredient)">Delete!</button>
-  </li>
-</ul>
-<button (click)="goToAddMenuItemIngredientPage()">Add Ingredient</button>
-<button (click)="goToSearchMenuItemIngredientPage()">Search Ingredients</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <app-app-header></app-app-header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">FOODS</h1>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let currentMenuItemIngredient of menuItemIngredientList | async">Description: {{currentMenuItemIngredient.ingredientDescription}}<br><button class="button" (click)="goToEditMenuItemIngredientPage(currentMenuItemIngredient)">Update</button><button class="button" (click)="goToDeleteMenuItemIngredientPage(currentMenuItemIngredient)">Delete</button>
+        </ul>
+        <script>
+          $('#loading').hide();
+        </script>
+        <br>
+        <button class="button" (click)="goToAddMenuItemIngredientPage()">Add Food</button>
+        <button class="button" (click)="goToSearchMenuItemIngredientPage()">Search Foods</button>
+
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>
