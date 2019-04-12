@@ -28,8 +28,11 @@ export class NewTaskComponent implements OnInit {
   }
 
   addTask(taskDescription: string, taskPlannedStartDateTimeDate: Date = new Date()) {
-    let newTask: Task = new Task(taskDescription, taskPlannedStartDateTimeDate);
-    this.taskService.addTask(newTask);
-    this.goToShowTaskPage();
+    if (taskDescription != null && Date.parse(taskPlannedStartDateTimeDate.toString()) != 0) {
+      let newTask: Task = new Task(taskDescription, taskPlannedStartDateTimeDate);
+      this.taskService.addTask(newTask);
+      this.goToShowTaskPage();
+  } else {
+    alert('All fields are required!');
   }
 }

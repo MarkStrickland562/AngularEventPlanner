@@ -28,8 +28,11 @@ export class NewMenuItemComponent implements OnInit {
   }
 
   addMenuItem(menuItemDescription: string) {
-    let newMenuItem: MenuItem = new MenuItem(menuItemDescription);
-    this.menuItemService.addMenuItem(newMenuItem);
-    this.goToShowMenuItemPage();
+    if (menuItemDescription != null) {
+      let newMenuItem: MenuItem = new MenuItem(menuItemDescription);
+      this.menuItemService.addMenuItem(newMenuItem);
+      this.goToShowMenuItemPage();
+  } else {
+    alert('All fields are required!');    
   }
 }

@@ -28,8 +28,11 @@ export class NewInviteeComponent implements OnInit {
   }
 
   addInvitee(inviteeName: string, inviteeEmailAddress: string) {
-    let newInvitee: Invitee = new Invitee(inviteeName, inviteeEmailAddress);
-    this.inviteeService.addInvitee(newInvitee);
-    this.goToShowInviteePage();
+    if (inviteeName != null && inviteeEmailAddress != null) {
+      let newInvitee: Invitee = new Invitee(inviteeName, inviteeEmailAddress);
+      this.inviteeService.addInvitee(newInvitee);
+      this.goToShowInviteePage();
+  } else {
+    alert('All fields are required!');
   }
 }
