@@ -1,7 +1,19 @@
-<h3>Update Task</h3>
-<h4>{{taskToUpdate?.taskDescription}}</h4>
-<label>Task Description:</label>
-<input [ngModel]="taskToUpdate?.taskDescription" (ngModelChange)="taskToUpdate.taskDescription = $event">
-<label>Task Planned Start Date:</label>
-<input [ngModel]="taskToUpdate?.taskPlannedStartDateTime" (ngModelChange)="taskToUpdate.taskPlannedStartDateTime = $event">
-<button (click)="updateTask(taskToUpdate)">Done</button>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">UPDATE TASK</h1>
+        <label>Task Description:</label>
+        <input [ngModel]="taskToUpdate?.taskDescription" (ngModelChange)="taskToUpdate.taskDescription = $event">
+        <label>Task Planned Start Date:</label>
+        <input [ngModel]="taskToUpdate?.taskPlannedStartDateTime" (ngModelChange)="taskToUpdate.taskPlannedStartDateTime = $event">
+        <button class="button" (click)="updateTask(taskToUpdate)">Done</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

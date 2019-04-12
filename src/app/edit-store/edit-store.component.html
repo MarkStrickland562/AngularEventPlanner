@@ -1,5 +1,17 @@
-<h3>Update Store</h3>
-<h4>{{storeToUpdate?.storeName}}</h4>
-<label>Store Name:</label>
-<input [ngModel]="storeToUpdate?.storeName" (ngModelChange)="storeToUpdate.storeName = $event">
-<button (click)="updateStore(storeToUpdate)">Done</button>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">UPDATE STORE</h1>
+        <label>Store Name:</label>
+        <input [ngModel]="storeToUpdate?.storeName" (ngModelChange)="storeToUpdate.storeName = $event">
+        <button class="button" (click)="updateStore(storeToUpdate)">Done</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

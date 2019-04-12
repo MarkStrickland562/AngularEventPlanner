@@ -1,5 +1,17 @@
-<h3>Update Entree</h3>
-<h4>{{menuItemToUpdate?.menuItemDescription}}</h4>
-<label>Entree Description:</label>
-<input [ngModel]="menuItemToUpdate?.menuItemDescription" (ngModelChange)="menuItemToUpdate.memuItemDescription = $event">
-<button (click)="updateMenuItem(menuItemToUpdate)">Done</button>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">UPDATE DISH</h1>
+        <label>Entree Description:</label>
+        <input [ngModel]="menuItemToUpdate?.menuItemDescription" (ngModelChange)="menuItemToUpdate.memuItemDescription = $event">
+        <button class="button" (click)="updateMenuItem(menuItemToUpdate)">Done</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

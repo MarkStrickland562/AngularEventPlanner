@@ -1,7 +1,19 @@
-<h3>Update Guest</h3>
-<h4>{{inviteeToUpdate?.inviteeName}}</h4>
-<label>Guest Name:</label>
-<input [ngModel]="inviteeToUpdate?.inviteeName" (ngModelChange)="inviteeToUpdate.inviteeName = $event">
-<label>Guest Email Address:</label>
-<input [ngModel]="inviteeToUpdate?.inviteeEmailAddress" (ngModelChange)="inviteeToUpdate.inviteeEmailAddress = $event">
-<button (click)="updateInvitee(inviteeToUpdate)">Done</button>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">UPDATE INVITE</h1>
+        <label>Invite Name:</label>
+        <input [ngModel]="inviteeToUpdate?.inviteeName" (ngModelChange)="inviteeToUpdate.inviteeName = $event">
+        <label>Invite Email Address:</label>
+        <input [ngModel]="inviteeToUpdate?.inviteeEmailAddress" (ngModelChange)="inviteeToUpdate.inviteeEmailAddress = $event">
+        <button class="button" (click)="updateInvitee(inviteeToUpdate)">Done</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,17 @@
-<h3>Update Ingredient</h3>
-<h4>{{menuItemIngredientToUpdate?.ingredientDescription}}</h4>
-<label>Ingredient Description:</label>
-<input [ngModel]="menuItemIngredientToUpdate?.ingredientDescription" (ngModelChange)="menuItemIngredientToUpdate.ingredientDescription = $event">
-<button (click)="updateMenuItemIngredient(menuItemIngredientToUpdate)">Done</button>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">UPDATE FOOD</h1>
+        <label>Food Description:</label>
+        <input [ngModel]="menuItemIngredientToUpdate?.ingredientDescription" (ngModelChange)="menuItemIngredientToUpdate.ingredientDescription = $event">
+        <button class="button" (click)="updateMenuItemIngredient(menuItemIngredientToUpdate)">Done</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>
