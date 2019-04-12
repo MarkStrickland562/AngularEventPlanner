@@ -9,11 +9,18 @@
         <h1 id="pageTitle">SEARCH FOR RECIPES</h1>
         <label>Enter a Search String:</label>
         <input type="text" #searchString>
-        <button class="button" (click)="searchRecipes(searchString.value)">Get Recipes</button>
+        <br>
+        <label>Enter the Number of Recipes to Display:</label>
+        <input type="number" #searchCount>
+        <br>
+        <button class="button" (click)="searchRecipes(searchString.value, searchCount.value)">Get Recipes</button>
       </div>
-      <div *ngIf="recipes">
+      <div id="recipe-content" *ngIf="recipes">
+        <p id="recipe-results">SEARCH RESULTS</p>
+        <button class="button" (click)="goToRecipeSearchPage()">Search Again</button>
+        <br><br>
         <ul class="list-group list-group-vertical">
-          <li class="list-group-item list-group-item-success" *ngFor="let recipe of recipes.hits">Title: {{recipe.recipe.label}}</li>
+          <li class="list-group-item list-group-item-success" *ngFor="let recipe of recipes.hits"><img src={{recipe.recipe.image}} height="100" width="100"><br>{{recipe.recipe.label}}<br><a href={{recipe.recipe.uri}}>{{recipe.recipe.url}}</a></li>
         </ul>
       </div>
       <app-app-script-sidebar></app-app-script-sidebar>

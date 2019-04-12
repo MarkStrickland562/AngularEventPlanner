@@ -12,9 +12,6 @@
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item list-group-item-success" *ngFor="let currentEvent of eventList | async">Event: {{currentEvent.eventName}}<br>Date: {{currentEvent.eventDate}}<br>Location: {{currentEvent.eventLocation}}<br><br><button class="button" (click)="goToEditEventPage(currentEvent)">Update</button>  <button class="button" (click)="goToDeleteEventPage(currentEvent)">Delete</button></li>
         </ul>
-        <script>
-          $('#loading').hide();
-        </script>
         <br>
         <button class="button" (click)="goToAddEventPage()">Add Event</button>
         <button class="button" (click)="goToSearchEventPage()">Search Events</button>

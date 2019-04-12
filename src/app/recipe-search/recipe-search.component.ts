@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { RecipeSearchService } from '../recipe-search.service';
 
 @Component({
@@ -11,13 +12,17 @@ import { RecipeSearchService } from '../recipe-search.service';
 export class RecipeSearchComponent {
   recipes: any[];
 
-  constructor(private recipeSearchService: RecipeSearchService) { }
+  constructor(private router: Router, private recipeSearchService: RecipeSearchService) { }
 
-  searchRecipes(searchString: string) {
+  searchRecipes(searchString: string, searchCount: number) {
     this.recipes = null;
-    this.recipeSearchService.getRecipes(searchString).subscribe(response => {
+    this.recipeSearchService.getRecipes(searchString, searchCount).subscribe(response => {
       this.recipes = response.json();
-      console.log(this.recipes);
     });
   }
+
+  goToRecipeSearchPage(clickedEvent) {
+    location.reload();
+  }
+
 }

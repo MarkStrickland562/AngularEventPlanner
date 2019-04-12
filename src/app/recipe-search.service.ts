@@ -9,7 +9,7 @@ export class RecipeSearchService {
 
   constructor(private http: Http) { }
 
-  getRecipes(searchString: string) {
-    return this.http.get(`https://api.edamam.com/search?q=${searchString}&app_id=${recipeID}&app_key=${recipeKey}`)
+  getRecipes(searchString: string, searchCount: number) {
+    return this.http.get(`https://api.edamam.com/search?q=${searchString}&to=${searchCount}&app_id=${recipeID}&app_key=${recipeKey}`)
   }
 }

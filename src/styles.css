@@ -66,7 +66,26 @@ svg.fa- {
     color: darkgreen;
 }
 
+#recipe-content {
+    width: 100%;
+    font-family: 'Luckiest Guy', cursive;
+    min-height: 100vh;
+    position: absolute;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-right: 10%;
+    background-color: beige;
+    color: darkgreen;
+}
+
 #pageTitle {
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    margin-top: 2%;
+    color: darkgreen;
+}
+
+#recipe-results {
     font-size: 30px;
     font-family: 'Luckiest Guy', cursive;
     margin-top: 2%;
@@ -237,7 +256,7 @@ ul ul a {
 
 .fa-search-plus {
   font-size: 50px;
-  color: #3da599; 
+  color: #3da599;
 }
 
 #closeNav {
