@@ -55,6 +55,10 @@ import { SearchMenuItemIngredientPipe } from './search-menu-item-ingredient.pipe
 import { SearchTaskPipe } from './search-task.pipe';
 import { SearchStorePipe } from './search-store.pipe';
 import { SearchInviteePipe } from './search-invitee.pipe';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { AppSidenavComponent } from './app-sidenav/app-sidenav.component';
+import { AppTopRightNavComponent } from './app-top-right-nav/app-top-right-nav.component';
+import { AppScriptSidebarComponent } from './app-script-sidebar/app-script-sidebar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -110,7 +114,11 @@ export const firebaseConfig = {
     SearchMenuItemIngredientPipe,
     SearchTaskPipe,
     SearchInviteePipe,
-    SearchStorePipe
+    SearchStorePipe,
+    AppHeaderComponent,
+    AppSidenavComponent,
+    AppTopRightNavComponent,
+    AppScriptSidebarComponent
   ],
   imports: [
     BrowserModule,

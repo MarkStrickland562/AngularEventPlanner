@@ -1,0 +1,16 @@
+<script>
+$(document).ready(function () {
+
+  $('#sidebarCollapse').on('click', function () {
+  // open or close navbar
+    $('#sidebar').toggleClass('active');
+    // close dropdowns
+    $('#content').toggleClass('active');
+  });
+
+  $('#closeNav').on('click', function () {
+    $('#sidebar').toggleClass('active');
+    $('#content').toggleClass('active');
+  });
+});
+</script>
