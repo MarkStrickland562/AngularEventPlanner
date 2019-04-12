@@ -1,6 +1,17 @@
-<h3>Add New Ingredient</h3>
-<div>
- <label>Enter Ingredient Name:</label>
- <input #newIngredientDescription>
-  <button (click)="addMenuItemIngredient(newIngredientDescription.value, 1, 1); newIngredientDescription.value='';">Add Ingredient</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW FOOD</h1>
+        <label>Enter Ingredient Name:</label>
+        <input #newIngredientDescription>
+        <button class="button" (click)="addMenuItemIngredient(newIngredientDescription.value, 1, 1); newIngredientDescription.value='';">Add Food</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

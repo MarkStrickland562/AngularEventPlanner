@@ -6,3 +6,23 @@
  <input #newInviteeEmailAddress>
   <button (click)="addInvitee(newInviteeName.value, newInviteeEmailAddress.value); newInviteeName.value=''; newInviteeEmailAddress.value='';">Add Guest</button>
 </div>
+
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW INVITE</h1>
+        <label>Enter Guest Name:</label>
+        <input #newInviteeName>
+        <label>Enter Guest Email Address:</label>
+        <input #newInviteeEmailAddress>
+        <button class="button" (click)="addInvitee(newInviteeName.value, newInviteeEmailAddress.value); newInviteeName.value=''; newInviteeEmailAddress.value='';">Add Invite</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

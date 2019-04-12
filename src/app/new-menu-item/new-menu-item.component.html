@@ -1,6 +1,17 @@
-<h3>Add New Entree</h3>
-<div>
- <label>Enter Entree Description:</label>
- <input #newMenuItemDescription>
-  <button (click)="addMenuItem(newMenuItemDescription.value); newMenuItemDescription.value='';">Add Entree</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW DISH</h1>
+        <label>Enter Entree Description:</label>
+        <input #newMenuItemDescription>
+        <button class="button" (click)="addMenuItem(newMenuItemDescription.value); newMenuItemDescription.value='';">Add Dish</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

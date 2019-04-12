@@ -1,8 +1,19 @@
-<h3>Add New Task</h3>
-<div>
-  <label>Enter Task Description:</label>
-  <input #newTaskDescription>
-  <label>Enter Task Planned Start Date:</label>
-  <input #newTaskPlannedStartDateTime type="datetime-local">
-  <button (click)="addTask(newTaskDescription.value, newTaskPlannedStartDateTime.value); newTaskDescription.value=''; newTaskPlannedStartDateTime.value='';">Add Task</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW TASK</h1>
+        <label>Enter Task Description:</label>
+        <input #newTaskDescription>
+        <label>Enter Task Planned Start Date:</label>
+        <input #newTaskPlannedStartDateTime type="datetime-local">
+        <button class="button" (click)="addTask(newTaskDescription.value, newTaskPlannedStartDateTime.value); newTaskDescription.value=''; newTaskPlannedStartDateTime.value='';">Add Task</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

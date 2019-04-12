@@ -1,6 +1,18 @@
-<h3>Add New Menu</h3>
-<div>
- <label>Enter Menu Theme:</label>
- <input #newMenuTheme>
- <button (click)="addMenu(newMenuTheme.value); newMenuTheme.value='';">Add Menu</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW MENU</h1>
+        <label>Enter Menu Theme:</label>
+        <input #newMenuTheme>
+        <button (click)="addMenu(newMenuTheme.value); newMenuTheme.value='';">Add Menu</button>
+        <button class="button" (click)="addEvent(newEventName.value, newEventDate.value, newEventLocation.value, 1); newEventName.value=''; newEventDate.value=''; newEventLocation.value='';">Add Menu</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,17 @@
-<h3>Add New Store</h3>
-<div>
-  <label>Enter Store Name:</label>
-  <input #newStoreName>
-  <button (click)="addStore(newStoreName.value); newStoreName.value='';">Add Store</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <app-app-header></app-app-header>
+  <body>
+    <div class="wrapper">
+      <app-app-sidenav></app-app-sidenav>
+      <div id="page-content">
+        <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">ADD NEW STORE</h1>
+        <label>Enter Store Name:</label>
+        <input #newStoreName>
+        <button class="button" (click)="addStore(newStoreName.value); newStoreName.value='';">Add Store</button>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>
