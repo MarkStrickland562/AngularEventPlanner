@@ -39,6 +39,7 @@ import { NewInviteeComponent } from './new-invitee/new-invitee.component';
 import { EditInviteeComponent } from './edit-invitee/edit-invitee.component';
 import { DeleteInviteeComponent } from './delete-invitee/delete-invitee.component';
 import { SearchInviteeComponent } from './search-invitee/search-invitee.component';
+import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 
 const appRoutes: Routes = [
   {
@@ -193,6 +194,10 @@ const appRoutes: Routes = [
     path: 'search-invitee',
     component: SearchInviteeComponent
   },
+  {
+    path: 'recipes',
+    component: RecipeSearchComponent
+  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

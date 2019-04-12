@@ -1,3 +1,22 @@
-<p>
-  recipe-search works!
-</p>
+<!DOCTYPE html>
+<html>
+<app-app-header></app-app-header>
+<body>
+  <div class="wrapper">
+    <app-app-sidenav></app-app-sidenav>
+    <div id="page-content">
+      <app-app-top-right-nav></app-app-top-right-nav>
+        <h1 id="pageTitle">SEARCH FOR RECIPES</h1>
+        <label>Enter a Search String:</label>
+        <input type="text" #searchString>
+        <button class="button" (click)="searchRecipes(searchString.value)">Get Recipes</button>
+      </div>
+      <div *ngIf="recipes">
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item list-group-item-success" *ngFor="let recipe of recipes">Title: {{recipe.title}}</li>
+        </ul>
+      </div>
+      <app-app-script-sidebar></app-app-script-sidebar>
+    </div>
+  </body>
+</html>

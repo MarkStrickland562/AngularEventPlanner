@@ -235,6 +235,11 @@ ul ul a {
   color: #ff696d;
 }
 
+.fa-search-plus {
+  font-size: 50px;
+  color: #3da599; 
+}
+
 #closeNav {
     background-color: transparent;
     border: none;
