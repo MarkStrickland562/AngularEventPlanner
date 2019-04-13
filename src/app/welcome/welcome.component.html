@@ -7,16 +7,16 @@
     <div class="container">
       <h1>Welcome to <span class="e">e</span>Happenings!</h1>
       <h2>Plan your next fabulous event</h2>
-      <ul>
+      <!-- <ul>
         <li *ngIf="isLoggedIn">
-          <button class="button"><a>{{userName}}</a><a (click)="logout()">Log Out</a>
+          <button class="button"><a (click)="logout()" routerLink="/main">Log Out</a>
           </button>
         </li>
-        <li *ngIf ="!isLoggedIn">
-          <button class="button"><a (click)="login()" routerLink="main">Log In</a>
+        <li *ngIf ="!isLoggedIn"> -->
+          <button class="button"><a (click)="login()" routerLink="/main">Log In</a>
           </button>
-        </li>
-      </ul>
+        <!-- </li>
+      </ul> -->
     </div>
     <!-- <div>
       <button type="button"><a routerLink="main">ENTER</a></button>
