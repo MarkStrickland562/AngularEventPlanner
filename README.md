@@ -31,8 +31,7 @@ The application can be accessed through this URL: https://angulareventplanner-38
 * 1 API
 
 ## Known Bugs
-
-No known bugs.
+User authentication is installed but it's getting blocked by Google, apparently, so the Login button on the splash page will take the end-user into the Main page.
 
 ## Project Plan
 
