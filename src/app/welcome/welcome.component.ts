@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -14,7 +13,7 @@ export class WelcomeComponent {
   private isLoggedIn: Boolean;
   private userName: String;
 
-  constructor(private router: Router, public authService: AuthenticationService) {
+  constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user =>  {
       if (user == null) {
         this.isLoggedIn = false;
