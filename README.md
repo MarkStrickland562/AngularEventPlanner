@@ -41,24 +41,43 @@ User authentication is installed but it's getting blocked by Google, apparently,
 <details>
 <summary>Click Here for Details</summary>
 This assumes that node is already installed, but verify with "node -v".
+<br><br>
 1) Install the required projects by executing the following commands at the bash prompt:
+<br><br>
     $ npm install typescript -g
+<br>
     $ npm install bootstrap --save
+<br>
     $ apm install atom-typescript
+<br>
     $ npm install -g @angular/cli@1.6.5
+<br>
     $ cd desktop
+<br>
     $ ng new AngularEventPlanner
+<br>
     $ npm install bootstrap --save
+<br><br>
 2) Populate .gitignore with:
+<br><br>
     node_modules/
+<br>
     .DS_Store
+<br>
     dist/
+<br>
     .env
+<br><br>
 3) Point Angular to the installed Bootstrap node module by adding the following to .angular-cli.json in the styles array so that it looks like this:
+<br><br>
   "styles": [
+<br>
   "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+  <br>
   "styles.css"
+  <br>
   ],
+<br><br>
 4) Add the Forms Module to app.module.ts. In the top section of imports add "import { FormsModule } from '@angular/forms'". In the @ngModule section in the imports array, add ", FormsModule" after "BrowserModule".
 </details>
 
